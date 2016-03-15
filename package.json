@@ -2,6 +2,7 @@
   "name": "doorbuilder",
   "version": "1.1.1",
   "description": "doorbuilder: An Ionic project",
+  "main": "server.js",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
