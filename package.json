@@ -22,5 +22,18 @@
     "cordova-plugin-splashscreen",
     "com.ionic.keyboard"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [],
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhammadmohsin1994/RBRSIonic.git"
+  },
+  "author": "Muhammad Mohsin <muhammad.mohsin1994@gmail.com>",
+  "license": "All rights reserved"
 }
