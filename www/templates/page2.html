@@ -1,0 +1,14 @@
+<ion-view title="Design">
+  <ion-content class="has-header">
+    <h4 class="text-heading">Select Door Design</h4>
+    <div class="container-fluid">
+			<div class="frame-container">
+        <!-- Wooden textures -->
+	      <div ng-repeat="wtex in wtexs" class="frame">
+	        <img ng-src="wtex.img">
+          <span ng-bind="wtex.img"></span>
+	      </div>
+	    </div>
+    </div>
+  </ion-content>
+</ion-view>

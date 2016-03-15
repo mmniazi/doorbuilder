@@ -1,0 +1,7 @@
+{
+	"name": "DoorBuilder",
+	"private": "true",
+	"dependencies": {
+		"ionic": "driftyco/ionic-bower"
+	}
+}

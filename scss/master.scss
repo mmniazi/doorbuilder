@@ -1,0 +1,74 @@
+// Imports
+@import "ionic.app.scss";
+@import "../www/css/bootstrap.min.scss";
+// Text
+a {
+  text-decoration: none!important;
+}
+
+.text-heading {
+  text-align: center;
+}
+// Toggle Button
+.toggleButton {
+  border-color: $dark!important;
+  @extend .button;
+  @extend .button-outline;
+}
+
+.untoggledButton {
+  @extend .toggleButton;
+  background-color: $light!important;
+  color           : $dark!important;
+}
+
+.toggledButton {
+  @extend .toggleButton;
+  background-color: $dark!important;
+  color           : $light!important;
+}
+// Image Frames
+.frame-container {
+  @extend .row-bs;
+}
+
+.frame-abstract {
+  @extend .col-xs-6;
+  @extend .col-sm-6;
+  @extend .col-md-3;
+  padding: 20px;
+
+  img {
+    width        : 100%;
+    padding      : 5px;
+    border       : 5px solid;
+    border-radius: 5px;
+  }
+}
+
+.frame {
+  @extend .frame-abstract;
+
+  img {
+    border-color: $dark!important;
+  }
+}
+
+.frame-selected {
+  @extend .frame-abstract;
+
+  img {
+    border-color: $positive;
+  }
+}
+// Side Menu
+.selectedMenu {
+  background-color: $dark!important;
+  color: $light!important;
+  border-color: $dark;
+}
+
+.deSelectedMenu {
+  background-color: $light!important;
+  color: $dark!important;
+}

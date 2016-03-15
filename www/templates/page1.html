@@ -1,0 +1,36 @@
+<ion-view title="Dimensions">
+  <ion-content class="has-header">
+    <!-- Doors number & size -->
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="Number of doors">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Width">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Height">
+      </label>
+    </div>
+
+    <!-- Door/Lamination -->
+    <div class="padding">
+      <h4 class="text-heading">Select Door Type</h4>
+      <div class="button-bar">
+        <button ng-click="setType(true)" ng-class="laminated?'toggledButton':'untoggledButton'">
+          Laminated
+        </button>
+        <button ng-click="setType(false)" ng-class="!laminated?'toggledButton':'untoggledButton'">
+          Wooden Texture
+        </button>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="padding">
+      <a class="button button-block button-outline button-dark" href="#/sidemenu/page2" ng-click="$parent.setPage(2)">
+        Next
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
