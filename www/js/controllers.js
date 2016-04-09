@@ -29,9 +29,13 @@ angular.module('app.controllers', [])
 	}
 })
 
-.controller('page2Ctrl', function($scope, doorService, wtexsFactory) {
-	$scope.wtexs = wtexsFactory;
-
+.controller('page2Ctrl', function($scope, doorService, textures) {
+	$scope.texs = textures;
+	$scope.texture = doorService.texture;
+	$scope.setTex = function (tex) {
+		$scope.texture = tex;
+		doorService.texture = tex;
+	}
 })
 
 .controller('page3Ctrl', function($scope) {

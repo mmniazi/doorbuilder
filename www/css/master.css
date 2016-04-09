@@ -10659,7 +10659,8 @@ a {
     border-radius: 5px; }
 
 .frame img {
-  border-color: #444 !important; }
+  border-color: #444 !important;
+  cursor: pointer; }
 
 .frame-selected img {
   border-color: #387ef5; }

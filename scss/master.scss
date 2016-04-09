@@ -1,7 +1,7 @@
 // Imports
 @import "ionic.app.scss";
-@import "../www/css/bootstrap.min.scss";
-// Text
+@import "../www/css/bootstrap.min.scss"; // Text
+
 a {
   text-decoration: none!important;
 }
@@ -10,6 +10,7 @@ a {
   text-align: center;
 }
 // Toggle Button
+
 .toggleButton {
   border-color: $dark!important;
   @extend .button;
@@ -28,6 +29,7 @@ a {
   color           : $light!important;
 }
 // Image Frames
+
 .frame-container {
   @extend .row-bs;
 }
@@ -51,6 +53,7 @@ a {
 
   img {
     border-color: $dark!important;
+	cursor:pointer;
   }
 }
 
@@ -62,13 +65,14 @@ a {
   }
 }
 // Side Menu
+
 .selectedMenu {
   background-color: $dark!important;
-  color: $light!important;
-  border-color: $dark;
+  color           : $light!important;
+  border-color    : $dark;
 }
 
 .deSelectedMenu {
   background-color: $light!important;
-  color: $dark!important;
+  color           : $dark!important;
 }
