@@ -1,8 +1,12 @@
 angular.module('app.services', [])
 
 .service('doorService', function() {
-	this.laminated = false;
-	this.texture = 0;
+	this.isLaminated = true;
+	this.texture = 1;
+	this.lamination = 1;
+	this.design = 1;
+	this.hinge = 1;
+	this.handle = 1;
 })
 
 // TODO: http://ionicframework.com/docs/v2/native/Base64%20To%20Gallery/
@@ -12,8 +16,8 @@ angular.module('app.services', [])
   return $firebaseArray(fire);
 })
 
-.factory("lemnations", function($firebaseArray) {
-  var fire = new Firebase("https://doorsbuilder.firebaseio.com/lemnations");
+.factory("lamination", function($firebaseArray) {
+  var fire = new Firebase("https://doorsbuilder.firebaseio.com/lamination");
   return $firebaseArray(fire);
 })
 

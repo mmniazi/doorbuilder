@@ -53,7 +53,7 @@ a {
 
   img {
     border-color: $dark!important;
-	cursor:pointer;
+    cursor      : pointer;
   }
 }
 
@@ -64,15 +64,14 @@ a {
     border-color: $positive;
   }
 }
-// Side Menu
-
-.selectedMenu {
-  background-color: $dark!important;
-  color           : $light!important;
-  border-color    : $dark;
+// Bottom buttons
+.button-bottom {
+  @extend .col-xs-12;
+  @extend .col-md-6;
 }
 
-.deSelectedMenu {
-  background-color: $light!important;
-  color           : $dark!important;
+.button-center {
+	@extend .button-bottom;
+	@extend .col-xs-offset-0;
+	@extend .col-md-offset-3;
 }

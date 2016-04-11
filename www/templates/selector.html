@@ -1,0 +1,25 @@
+<ion-view title="Design">
+  <ion-content class="has-header">
+    <h4 class="text-heading">Select Door Texture</h4>
+    <div class="container-fluid">
+      <div class="frame-container">
+        <div ng-repeat="img in images">
+          <div ng-class="(img.$id == selected) ? 'frame-selected' : 'frame'">
+            <img ng-src="{{img.$value}}" ng-click="set(img.$id)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Buttons -->
+    <div class="padding button-bottom">
+      <a class="button button-block button-outline button-dark" ng-href="#/sidemenu/page{{(id==4) ? 1 : id-1}}">
+        Back
+      </a>
+    </div>
+    <div class="padding button-bottom">
+      <a class="button button-block button-outline button-dark" ng-href="#/sidemenu/page{{(id==3) ? 5 : id+1}}">
+        Next
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

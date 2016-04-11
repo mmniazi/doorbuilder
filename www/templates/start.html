@@ -17,18 +17,18 @@
     <div class="padding">
       <h4 class="text-heading">Select Door Type</h4>
       <div class="button-bar">
-        <button ng-click="setType(true)" ng-class="laminated?'toggledButton':'untoggledButton'">
+        <button ng-click="set(true)" ng-class="isLaminated?'toggledButton':'untoggledButton'">
           Laminated
         </button>
-        <button ng-click="setType(false)" ng-class="!laminated?'toggledButton':'untoggledButton'">
+        <button ng-click="set(false)" ng-class="!isLaminated?'toggledButton':'untoggledButton'">
           Wooden Texture
         </button>
       </div>
     </div>
 
     <!-- Buttons -->
-    <div class="padding">
-      <a class="button button-block button-outline button-dark" href="#/sidemenu/page2">
+    <div class="padding button-center">
+      <a class="button button-block button-outline button-dark" ng-href="#/sidemenu/page{{(isLaminated) ? 4 : 2}}">
         Next
       </a>
     </div>
