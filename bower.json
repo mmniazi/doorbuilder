@@ -1,7 +1,9 @@
 {
-	"name": "DoorBuilder",
-	"private": "true",
-	"dependencies": {
-		"ionic": "driftyco/ionic-bower"
-	}
+  "name": "DoorBuilder",
+  "private": "true",
+  "dependencies": {
+    "ionic": "driftyco/ionic-bower",
+    "angularfire": "^1.2.0",
+    "jquery": "^2.2.3"
+  }
 }

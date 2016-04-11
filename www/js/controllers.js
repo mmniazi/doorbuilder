@@ -1,12 +1,14 @@
 angular.module('app.controllers', [])
 // TODO: add current price to each page
 // TODO: create front page loader
+// TODO: create a single controller for all pages
 .controller('sidemenuCtrl', function ($scope, $window) {
-	$scope.rSideMenuWidth =
+	$scope.sideMenuWidth =
 		($window.innerWidth >= 768) ? $window.innerWidth * 0.5 : $window.innerWidth * 0.7;
 })
 
-.controller('page1Ctrl', function ($scope, doorService) {
+.controller('startCtrl', function ($scope, doorService) {
+	$scope.id = 1;
 	$scope.isLaminated = doorService.isLaminated;
 	$scope.set = function (type) {
 		$scope.isLaminated = type;
@@ -14,7 +16,8 @@ angular.module('app.controllers', [])
 	}
 })
 
-.controller('page2Ctrl', function ($scope, doorService, textures) {
+.controller('selectorCtrl', function ($scope, doorService, textures, $routeParams) {
+	$scope.id = $routeParams.id;
 	$scope.selected = doorService.texture;
 	$scope.images = textures;
 	$scope.set = function (texture) {
@@ -23,42 +26,7 @@ angular.module('app.controllers', [])
 	}
 })
 
-.controller('page3Ctrl', function ($scope, doorService, designs) {
-	$scope.selected = doorService.design;
-	$scope.images = designs;
-	$scope.set = function (design) {
-		$scope.selected = design;
-		doorService.lamination = design;
-	}
-})
-
-.controller('page4Ctrl', function ($scope, doorService, lamination) {
-	$scope.selected = doorService.lamination;
-	$scope.images = lamination;
-	$scope.set = function (lamination) {
-		$scope.selected = lamination;
-		doorService.lamination = lamination;
-	}
-})
-
-.controller('page5Ctrl', function ($scope, doorService, hinges) {
-	$scope.selected = doorService.hinge;
-	$scope.images = hinges;
-	$scope.set = function (hinge) {
-		$scope.selected = hinge;
-		doorService.hinge = hinge;
-	}
-})
-
-.controller('page6Ctrl', function ($scope, doorService, handles) {
-	$scope.selected = doorService.handle;
-	$scope.images = handles;
-	$scope.set = function (handle) {
-		$scope.selected = handle;
-		doorService.handle = handle;
-	}
-})
-
 .controller('page7Ctrl', function ($scope, doorService, handles) {
+	$scope.id = 7;
 
 })
