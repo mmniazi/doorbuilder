@@ -1,23 +1,35 @@
-<ion-view title="Design">
+<ion-view title="Select {{heading}}">
   <ion-content class="has-header">
-    <h4 class="text-heading">Select Door Texture</h4>
+    <div class="bar bar-header">
+      <h1 class="title">Price</h1>
+    </div>
     <div class="container-fluid">
       <div class="frame-container">
-        <div ng-repeat="img in images">
-          <div ng-class="(img.$id == selected) ? 'frame-selected' : 'frame'">
-            <img ng-src="{{img.$value}}" ng-click="set(img.$id)">
+        <div ng-repeat="img in images" class="frame">
+          <div class="list card" ng-click="set(img.$id)">
+            <div class="item item-icon-right">
+              <i class="icon" ng-class="{'ion-ios-checkmark': img.$id == selected}"></i>
+              {{img.name}}
+            </div>
+            <div class="item item-image">
+              <img ng-src="{{img.data}}">
+            </div>
+            <div class="item">
+              {{img.price}}
+              Rs
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Buttons -->
     <div class="padding button-bottom">
-      <a class="button button-block button-outline button-dark" ng-href="#/sidemenu/selector/{{(id==4) ? 1 : id-1}}">
+      <a class="button button-block button-outline button-dark" ng-href="{{backUrl()}}">
         Back
       </a>
     </div>
     <div class="padding button-bottom">
-      <a class="button button-block button-outline button-dark" ng-href="#/sidemenu/page{{(id==3) ? 5 : id+1}}">
+      <a class="button button-block button-outline button-dark" ng-href="{{nextUrl()}}">
         Next
       </a>
     </div>
