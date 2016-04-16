@@ -1,37 +1,34 @@
-<ion-view title="Select {{heading}}">
-  <ion-content class="has-header">
-    <div class="bar bar-header">
-      <h1 class="title">Price {{1+2}}</h1>
-    </div>
-    <div class="container-fluid">
-      <div class="frame-container">
-        <div ng-repeat="img in images" class="frame">
-          <div class="list card" ng-click="set(img.$id)">
-            <div class="item item-icon-right">
-              <i class="icon" ng-class="{'ion-ios-checkmark': img.$id == selected}"></i>
-              {{img.name}}
-            </div>
-            <div class="item item-image">
-              <img ng-src="{{img.data}}">
-            </div>
-            <div class="item">
-              {{img.price}}
-              Rs
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Buttons -->
-    <div class="padding button-bottom">
-      <a class="button button-block button-outline button-dark" ng-href="{{backUrl()}}">
-        Back
-      </a>
-    </div>
-    <div class="padding button-bottom">
-      <a class="button button-block button-outline button-dark" ng-href="{{nextUrl()}}">
-        Next
-      </a>
-    </div>
-  </ion-content>
+<ion-view title="Price: {{price}} Rs">
+	<ion-content class="has-header">
+		<div class="bar bar-header">
+			<div class="title">
+				Select {{heading}}
+			</div>
+		</div>
+		<div class="container-fluid avoid-header">
+			<div class="frame-container">
+				<div ng-repeat="item in items" class="frame">
+					<div class="list card" ng-click="set(item)">
+						<div class="item item-image">
+							<img ng-src="{{item.url}}">
+						</div>
+						<div class="item">
+							{{item.name}}
+						</div>
+						<div class="item item-icon-right">
+							<i class="icon" ng-class="{'ion-ios-checkmark': item == selected, 'ion-ios-checkmark-outline': item != selected}"></i>
+							<div>{{item.price}} Rs</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Buttons -->
+		<div class="padding button-bottom">
+			<a class="button button-block button-outline button-dark" ng-href="{{backUrl()}}">Back</a>
+		</div>
+		<div class="padding button-bottom">
+			<a class="button button-block button-outline button-dark" ng-disabled="!selected" ng-href="{{nextUrl()}}">Next</a>
+		</div>
+	</ion-content>
 </ion-view>

@@ -1,7 +1,5 @@
 angular.module('app.controllers', [])
-	// TODO: add current price to each page
 	// TODO: create front page loader
-	// TODO: ask for aspect ratio of doors and images ratio should match it
 
 .controller('sidemenuCtrl', function ($scope, $window) {
 	$scope.sideMenuWidth =
@@ -14,17 +12,21 @@ angular.module('app.controllers', [])
 		$scope.isLaminated = type;
 		state.set(1, type);
 	}
+	$scope.height;
+	$scope.width;
+	$scope.count;
 })
 
-.controller('selectorCtrl', function ($scope, state, images, $stateParams, $location, price) {
+.controller('selectorCtrl', function ($scope, state, data, $stateParams, $location, price) {
 	var id = $stateParams.id;
-	$scope.selected = state.get(id).value;
-	$scope.heading = state.get(id).name;
-	$scope.images = images(id);
-
 	if (!(id > 1 && id < 7)) {
 		$location.path("#/sidemenu/start/");
 	}
+
+	$scope.selected = state.get(id).value;
+	$scope.heading = state.get(id).name;
+	$scope.items = data(id);
+	$scope.price = price.sum();
 
 	$scope.backUrl = function () {
 		if (id == 4) {
@@ -45,5 +47,7 @@ angular.module('app.controllers', [])
 	$scope.set = function (selected) {
 		$scope.selected = selected;
 		state.set(id, selected);
+		price.set(id, selected.price);
+		$scope.price = price.sum();
 	}
 })

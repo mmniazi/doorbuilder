@@ -3,13 +3,15 @@ angular.module('app.routes', [])
 .config(function ($stateProvider, $urlRouterProvider) {
 	// Set up the various states which the app can be in.
 	// Each state's controller can be found in controllers.js
-	$stateProvider.
-	state('sidemenu', {
+	$stateProvider
+	.state('sidemenu', {
 		url: '/sidemenu',
 		abstract: true,
 		templateUrl: 'templates/sidemenu.html',
 		controller: 'sidemenuCtrl'
-	}).state('sidemenu.start', {
+	})
+
+	.state('sidemenu.start', {
 		url: "/start",
 		views: {
 			'content': {
@@ -17,7 +19,9 @@ angular.module('app.routes', [])
 				controller: 'startCtrl'
 			}
 		}
-	}).state('sidemenu.selector', {
+	})
+
+	.state('sidemenu.selector', {
 		url: "/selector/:id",
 		views: {
 			'content': {

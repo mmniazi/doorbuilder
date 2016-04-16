@@ -1,35 +1,33 @@
 <ion-view title="Dimensions">
-  <ion-content class="has-header">
-    <!-- Doors number & size -->
-    <div class="list list-inset">
-      <label class="item item-input">
-        <input type="text" placeholder="Number of doors">
-      </label>
-      <label class="item item-input">
-        <input type="text" placeholder="Width">
-      </label>
-      <label class="item item-input">
-        <input type="text" placeholder="Height">
-      </label>
-    </div>
+	<ion-content class="has-header">
+		<!-- Doors number & size -->
+		<form name="form" class="list list-inset" novalidate>
+			<label class="item item-input">
+				<input type="number" placeholder="Number of doors" ng-model="count" required min="1">
+			</label>
+			<label class="item item-input">
+				<input type="number" placeholder="Width" ng-model="width" required min="1">
+			</label>
+			<label class="item item-input">
+				<input type="number" placeholder="Height" ng-model="height" required min="1">
+			</label>
+		</form>
 
-    <!-- Door/Lamination -->
-    <div class="padding">
-      <h4 class="text-heading">Select Door Type</h4>
-      <div class="button-bar">
-        <button ng-click="set(true)" ng-class="isLaminated?'toggledButton':'untoggledButton'">
-          Laminated
-        </button>
-        <button ng-click="set(false)" ng-class="!isLaminated?'toggledButton':'untoggledButton'">
-          Wooden Texture
-        </button>
-      </div>
-    </div>
-    <!-- Buttons -->
-    <div class="padding button-center">
-      <a class="button button-block button-outline button-dark" ng-href="#/sidemenu/selector/{{(isLaminated) ? 4 : 2}}">
-        Design Your Door
-      </a>
-    </div>
-  </ion-content>
+		<!-- Door/Lamination -->
+		<div class="padding">
+			<h4 class="title text-center">Select Door Type</h4>
+			<div class="button-bar">
+				<button ng-click="set(true)" ng-class="isLaminated?'toggledButton':'untoggledButton'">
+					Laminated
+				</button>
+				<button ng-click="set(false)" ng-class="!isLaminated?'toggledButton':'untoggledButton'">
+					Wooden Texture
+				</button>
+			</div>
+		</div>
+		<!-- Buttons -->
+		<div class="padding button-center">
+			<a class="button button-block button-outline button-dark" ng-href="#/sidemenu/selector/{{(isLaminated) ? 4 : 2}}" ng-disabled="form.$invalid">Design Your Door</a>
+		</div>
+	</ion-content>
 </ion-view>
