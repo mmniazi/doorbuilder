@@ -14,3 +14,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
     }
   });
 })
+
+.config(function($ionicConfigProvider) {
+    $ionicConfigProvider.scrolling.jsScrolling(window.cordova);
+});
