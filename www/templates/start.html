@@ -1,33 +1,57 @@
-<ion-view title="Dimensions">
+<ion-view title="Welcome">
 	<ion-content class="has-header">
 		<!-- Doors number & size -->
+		<h4 class="title text-center">
+			Enter Door Dimensions
+		</h4>
 		<form name="form" class="list list-inset" novalidate>
-			<label class="item item-input">
-				<input type="number" placeholder="Number of doors" ng-model="count" required min="1">
-			</label>
-			<label class="item item-input">
-				<input type="number" placeholder="Width" ng-model="width" required min="1">
-			</label>
-			<label class="item item-input">
-				<input type="number" placeholder="Height" ng-model="height" required min="1">
-			</label>
+			<div class="item item-input" ng-repeat="door in doors">
+				<label class="item-input-wrapper margin-h">
+					<input class="padding-zero" type="number" placeholder="Count" ng-model="door.count" required min="1">
+				</label>
+				<label class="item-input-wrapper margin-h">
+					<input class="padding-zero" type="number" placeholder="Width" ng-model="door.width" required min="1">
+				</label>
+				<label class="item-input-wrapper margin-h">
+					<input class="padding-zero" type="number" placeholder="Height" ng-model="door.height" required min="1">
+				</label>
+				<button class="item-input-wrapper button button-outline button-small margin-h" ng-if="$index == doors.length - 1" ng-click="addInput()">
+					<i class="icon ion-plus"></i>
+				</button>
+				<button class="item-input-wrapper button button-outline button-small margin-h" ng-if="$index != doors.length - 1" ng-click="removeInput($index)">
+					<i class="icon ion-minus"></i>
+				</button>
+			</div>
 		</form>
 
-		<!-- Door/Lamination -->
-		<div class="padding">
-			<h4 class="title text-center">Select Door Type</h4>
-			<div class="button-bar">
-				<button ng-click="set(true)" ng-class="isLaminated?'toggledButton':'untoggledButton'">
-					Laminated
+		<!-- Units -->
+		<div class="toggleBar">
+			<h4 class="toggleLabel">Units</h4>
+			<div class="toggle-container">
+				<button ng-click="setUnits('Meters')" ng-class="units=='Meters'?'toggledButton':'untoggledButton'">
+					Meters
 				</button>
-				<button ng-click="set(false)" ng-class="!isLaminated?'toggledButton':'untoggledButton'">
+				<button ng-click="setUnits('Inches')" ng-class="units=='Inches'?'toggledButton':'untoggledButton'">
+					Inches
+				</button>
+			</div>
+		</div>
+
+		<!-- Door/Lamination -->
+		<div class="toggleBar">
+			<h4 class="toggleLabel">Door Type</h4>
+			<div class="toggle-container">
+				<button ng-click="setColored(true)" ng-class="isColored?'toggledButton':'untoggledButton'">
+					Color
+				</button>
+				<button ng-click="setColored(false)" ng-class="!isColored?'toggledButton':'untoggledButton'">
 					Wooden Texture
 				</button>
 			</div>
 		</div>
 		<!-- Buttons -->
 		<div class="padding button-center">
-			<a class="button button-block button-outline button-dark" ng-href="#/sidemenu/selector/{{(isLaminated) ? 4 : 2}}" ng-disabled="form.$invalid">Design Your Door</a>
+			<a class="button button-block button-outline button-dark" ng-href="#/sidemenu/selector/{{(isColored) ? 4 : 2}}" ng-disabled="form.$invalid" ng-click="next()">Design Your Door</a>
 		</div>
 	</ion-content>
 </ion-view>

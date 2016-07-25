@@ -1,44 +1,53 @@
 angular.module('app.services', [])
 
 .factory("data", function ($firebaseArray) {
-	var fire = new Firebase("https://doorsbuilder.firebaseio.com/");
-	var _textures = $firebaseArray(fire.child("textures"));
-	var _lamination = $firebaseArray(fire.child("lamination"));
-	var _hinges = $firebaseArray(fire.child("hinges"));
-	var _handles = $firebaseArray(fire.child("handles"));
-	var _designs = $firebaseArray(fire.child("designs"));
+  // Initialize Firebase
+  var config = {
+  	apiKey: "AIzaSyCjOc-2Q1uMZ4vGJioe9snaoFgEpE3zjlQ",
+  	authDomain: "doorsbuilder.firebaseapp.com",
+  	databaseURL: "https://doorsbuilder.firebaseio.com",
+  	storageBucket: "doorsbuilder.appspot.com",
+  };
 
-	this.ready = function (success, failed) {
-		var obj = $firebaseObject(fire);
-		obj.$loaded(
-			function (data) {
-				callback();
-			},
-			function (error) {
-				failed();
-			}
-		);
-	}
+  firebase.initializeApp(config);
+  var fire = firebase.database().ref();
+  var _textures = $firebaseArray(fire.child("textures"));
+  var _colors = $firebaseArray(fire.child("colors"));
+  var _hinges = $firebaseArray(fire.child("hinges"));
+  var _handles = $firebaseArray(fire.child("handles"));
+  var _designs = $firebaseArray(fire.child("designs"));
 
-	return function (id) {
-		switch (id) {
-			case "2":
-				return _textures;
-			case "3":
-				return _designs;
-			case "4":
-				return _lamination;
-			case "5":
-				return _handles;
-			case "6":
-				return _hinges;
-		}
-	};
+  this.ready = function (success, failed) {
+  	var obj = $firebaseObject(fire);
+  	obj.$loaded(
+  		function (data) {
+  			callback();
+  		},
+  		function (error) {
+  			failed();
+  		}
+  		);
+  }
+
+  return function (id) {
+  	switch (id) {
+  		case "2":
+  		return _textures;
+  		case "3":
+  		return _designs;
+  		case "4":
+  		return _colors;
+  		case "5":
+  		return _handles;
+  		case "6":
+  		return _hinges;
+  	}
+  };
 })
 
 .factory('state', function () {
-	var _isLaminated = {
-		name: "isLaminated",
+	var _isColored = {
+		name: "isColored",
 		value: false
 	};
 	var _textures = {
@@ -49,8 +58,8 @@ angular.module('app.services', [])
 		name: "Design",
 		value: null
 	};
-	var _lamination = {
-		name: "Lamination",
+	var _colors = {
+		name: "Color",
 		value: null
 	};
 	var _handles = {
@@ -62,43 +71,63 @@ angular.module('app.services', [])
 		value: null
 	};
 
-	this.set = function (id, selected) {
+	var _dimensions = {
+		name: "Dimensions",
+		value: null
+	};
+
+	var _units = {
+		name: "Units",
+		value: 'Inches'
+	};
+
+	this.set = function (id, value) {
 		switch (id) {
 			case "1":
-				_isLaminated.value = selected;
-				break;
+			_isColored.value = value;
+			break;
 			case "2":
-				_textures.value = selected;
-				break;
+			_textures.value = value;
+			break;
 			case "3":
-				_designs.value = selected;
-				break;
+			_designs.value = value;
+			break;
 			case "4":
-				_lamination.value = selected;
-				break;
+			_colors.value = value;
+			break;
 			case "5":
-				_handles.value = selected;
-				break;
+			_handles.value = value;
+			break;
 			case "6":
-				_hinges.value = selected;
-				break;
+			_hinges.value = value;
+			break;
+			case "7":
+			_dimensions.value = value;
+			break;
+			case "8":
+			_units.value = value;
+			break;
 		}
 	}
 
 	this.get = function (id) {
 		switch (id) {
 			case "1":
-				return _isLaminated;
+			return _isColored;
 			case "2":
-				return _textures;
+			return _textures;
 			case "3":
-				return _designs;
+			return _designs;
 			case "4":
-				return _lamination;
+			return _colors;
 			case "5":
-				return _handles;
+			return _handles;
 			case "6":
-				return _hinges;
+			return _hinges;
+			case "7":
+			return _dimensions;
+			case "8":
+			return _units;
 		}
 	}
 
@@ -108,49 +137,49 @@ angular.module('app.services', [])
 .factory("price", function () {
 	var _textures = 0;
 	var _designs = 0;
-	var _lamination = 0;
+	var _colors = 0;
 	var _handles = 0;
 	var _hinges = 0;
 	var _labour = 500;
 
 	this.sum = function () {
-		return _textures + _designs + _lamination + _handles + _hinges + _labour;
+		return _textures + _designs + _colors + _handles + _hinges + _labour;
 	}
 
 	this.get = function (id) {
 		switch (id) {
 			case "2":
-				return _textures;
+			return _textures;
 			case "3":
-				return _designs;
+			return _designs;
 			case "4":
-				return _lamination;
+			return _colors;
 			case "5":
-				return _handles;
+			return _handles;
 			case "6":
-				return _hinges;
+			return _hinges;
 			case "7":
-				return _labour;
+			return _labour;
 		}
 	}
 
 	this.set = function (id, price) {
 		switch (id) {
 			case "2":
-				_textures = parseInt(price);
-				break;
+			_textures = parseInt(price);
+			break;
 			case "3":
-				_designs = parseInt(price);
-				break;
+			_designs = parseInt(price);
+			break;
 			case "4":
-				_lamination = parseInt(price);
-				break;
+			_colors = parseInt(price);
+			break;
 			case "5":
-				_handles = parseInt(price);
-				break;
+			_handles = parseInt(price);
+			break;
 			case "6":
-				_hinges = parseInt(price);
-				break;
+			_hinges = parseInt(price);
+			break;
 		}
 	}
 

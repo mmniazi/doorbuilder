@@ -1,6 +1,6 @@
 // Imports
 @import "ionic.app.scss";
-@import "bootstrap.min.scss"; // Text
+@import "bootstrap.scss"; // Text
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -23,22 +23,40 @@ a {
 }
 // Toggle Button
 
-.toggleButton {
-  border-color: $dark!important;
-  @extend .button;
-  @extend .button-outline;
-}
+.toggleBar {
+  @extend .row-bs;
+  @extend .padding;
 
-.untoggledButton {
-  @extend .toggleButton;
-  background-color: $light!important;
-  color           : $dark!important;
-}
+  .toggleLabel {
+    @extend .title;
+    @extend .text-center;
+    @extend .col-xs-12;
+    @extend .col-md-4;
+  }
 
-.toggledButton {
-  @extend .toggleButton;
-  background-color: $dark!important;
-  color           : $light!important;
+  .toggle-container {
+    @extend .button-bar;
+    @extend .col-xs-12;
+    @extend .col-md-8;
+
+    .toggleButton {
+      border-color: $dark!important;
+      @extend .button;
+      @extend .button-outline;
+    }
+
+    .untoggledButton {
+      @extend .toggleButton;
+      background-color: $light!important;
+      color           : $dark!important;
+    }
+
+    .toggledButton {
+      @extend .toggleButton;
+      background-color: $dark!important;
+      color           : $light!important;
+    }
+  }
 }
 // Image Frames
 
@@ -77,4 +95,13 @@ a {
 
 .avoid-header {
   padding-top: 50px;
+}
+
+.margin-h {
+  margin-right: 16px !important;
+  margin-left : 0 !important;
+}
+
+.padding-zero {
+  padding-right: 0 !important;
 }

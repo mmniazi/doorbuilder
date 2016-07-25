@@ -7,14 +7,40 @@ angular.module('app.controllers', [])
 })
 
 .controller('startCtrl', function ($scope, state) {
-	$scope.isLaminated = false;
-	$scope.set = function (type) {
-		$scope.isLaminated = type;
-		state.set(1, type);
+	$scope.isColored = state.get("1").value;
+	$scope.units = state.get("8").value;
+
+	$scope.setColored = function (type) {
+		$scope.isColored = type;
+		state.set("1", type);
 	}
-	$scope.height;
-	$scope.width;
-	$scope.count;
+
+	$scope.setUnits = function (units) {
+		$scope.units = units;
+		state.set("8", units);
+	}
+
+	$scope.doors = [{
+		count: null,
+		width: null,
+		height: null
+	}];
+
+	$scope.addInput = function () {
+		$scope.doors.push({
+			count: null,
+			width: null,
+			height: null
+		});
+	}
+
+	$scope.removeInput = function (index) {
+		$scope.doors.splice(index, 1);
+	}
+
+	$scope.next = function () {
+		state.set("7", $scope.doors);
+	}
 })
 
 .controller('selectorCtrl', function ($scope, state, data, $stateParams, $location, price) {
@@ -50,4 +76,8 @@ angular.module('app.controllers', [])
 		price.set(id, selected.price);
 		$scope.price = price.sum();
 	}
+})
+
+.controller('priceCtrl', function ($scope, state, data, price) {
+
 })

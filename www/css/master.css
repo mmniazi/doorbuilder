@@ -3590,7 +3590,7 @@ cite {
 .text-right {
   text-align: right; }
 
-.text-center {
+.text-center, .toggleBar .toggleLabel {
   text-align: center; }
 
 h1, h2, h3, h4, h5, h6,
@@ -3760,7 +3760,7 @@ a.subdued {
   width: auto;
   z-index: 11;
   overflow: hidden; }
-  .action-sheet .button, .action-sheet .toggleButton, .action-sheet .untoggledButton, .action-sheet .toggledButton {
+  .action-sheet .button, .action-sheet .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .action-sheet .toggleButton, .action-sheet .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .action-sheet .untoggledButton, .action-sheet .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .action-sheet .toggledButton {
     display: block;
     padding: 1px;
     width: 100%;
@@ -3769,13 +3769,13 @@ a.subdued {
     background-color: transparent;
     color: #007aff;
     font-size: 21px; }
-    .action-sheet .button:hover, .action-sheet .toggleButton:hover, .action-sheet .untoggledButton:hover, .action-sheet .toggledButton:hover {
+    .action-sheet .button:hover, .action-sheet .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .action-sheet .toggleButton:hover, .action-sheet .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .action-sheet .untoggledButton:hover, .action-sheet .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .action-sheet .toggledButton:hover {
       color: #007aff; }
-    .action-sheet .button.destructive, .action-sheet .destructive.toggleButton, .action-sheet .destructive.untoggledButton, .action-sheet .destructive.toggledButton {
+    .action-sheet .button.destructive, .action-sheet .toggleBar .toggle-container .destructive.toggleButton, .toggleBar .toggle-container .action-sheet .destructive.toggleButton, .action-sheet .toggleBar .toggle-container .destructive.untoggledButton, .toggleBar .toggle-container .action-sheet .destructive.untoggledButton, .action-sheet .toggleBar .toggle-container .destructive.toggledButton, .toggleBar .toggle-container .action-sheet .destructive.toggledButton {
       color: #ff3b30; }
-      .action-sheet .button.destructive:hover, .action-sheet .destructive.toggleButton:hover, .action-sheet .destructive.untoggledButton:hover, .action-sheet .destructive.toggledButton:hover {
+      .action-sheet .button.destructive:hover, .action-sheet .toggleBar .toggle-container .destructive.toggleButton:hover, .toggleBar .toggle-container .action-sheet .destructive.toggleButton:hover, .action-sheet .toggleBar .toggle-container .destructive.untoggledButton:hover, .toggleBar .toggle-container .action-sheet .destructive.untoggledButton:hover, .action-sheet .toggleBar .toggle-container .destructive.toggledButton:hover, .toggleBar .toggle-container .action-sheet .destructive.toggledButton:hover {
         color: #ff3b30; }
-  .action-sheet .button.active, .action-sheet .active.toggleButton, .action-sheet .active.untoggledButton, .action-sheet .active.toggledButton, .action-sheet .button.activated, .action-sheet .activated.toggleButton, .action-sheet .activated.untoggledButton, .action-sheet .activated.toggledButton {
+  .action-sheet .button.active, .action-sheet .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .action-sheet .active.toggleButton, .action-sheet .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .action-sheet .active.untoggledButton, .action-sheet .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .action-sheet .active.toggledButton, .action-sheet .button.activated, .action-sheet .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .action-sheet .activated.toggleButton, .action-sheet .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .action-sheet .activated.untoggledButton, .action-sheet .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .action-sheet .activated.toggledButton {
     box-shadow: none;
     border-color: #d1d3d6;
     color: #007aff;
@@ -3796,15 +3796,15 @@ a.subdued {
   border-radius: 4px;
   background-color: #fff;
   overflow: hidden; }
-  .action-sheet-group .button, .action-sheet-group .toggleButton, .action-sheet-group .untoggledButton, .action-sheet-group .toggledButton {
+  .action-sheet-group .button, .action-sheet-group .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .action-sheet-group .toggleButton, .action-sheet-group .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .action-sheet-group .untoggledButton, .action-sheet-group .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .action-sheet-group .toggledButton {
     border-width: 1px 0px 0px 0px; }
-  .action-sheet-group .button:first-child:last-child, .action-sheet-group .toggleButton:first-child:last-child, .action-sheet-group .untoggledButton:first-child:last-child, .action-sheet-group .toggledButton:first-child:last-child {
+  .action-sheet-group .button:first-child:last-child, .action-sheet-group .toggleBar .toggle-container .toggleButton:first-child:last-child, .toggleBar .toggle-container .action-sheet-group .toggleButton:first-child:last-child, .action-sheet-group .toggleBar .toggle-container .untoggledButton:first-child:last-child, .toggleBar .toggle-container .action-sheet-group .untoggledButton:first-child:last-child, .action-sheet-group .toggleBar .toggle-container .toggledButton:first-child:last-child, .toggleBar .toggle-container .action-sheet-group .toggledButton:first-child:last-child {
     border-width: 0; }
 
 .action-sheet-options {
   background: #f1f2f3; }
 
-.action-sheet-cancel .button, .action-sheet-cancel .toggleButton, .action-sheet-cancel .untoggledButton, .action-sheet-cancel .toggledButton {
+.action-sheet-cancel .button, .action-sheet-cancel .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .action-sheet-cancel .toggleButton, .action-sheet-cancel .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .action-sheet-cancel .untoggledButton, .action-sheet-cancel .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .action-sheet-cancel .toggledButton {
   font-weight: 500; }
 
 .action-sheet-open {
@@ -3821,8 +3821,11 @@ a.subdued {
   margin: 0; }
   .platform-android .action-sheet .action-sheet-title,
   .platform-android .action-sheet .button,
+  .platform-android .action-sheet .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container
   .platform-android .action-sheet .toggleButton,
+  .platform-android .action-sheet .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container
   .platform-android .action-sheet .untoggledButton,
+  .platform-android .action-sheet .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container
   .platform-android .action-sheet .toggledButton {
     text-align: left;
     border-color: transparent;
@@ -3832,10 +3835,13 @@ a.subdued {
     font-size: 14px;
     padding: 16px;
     color: #666; }
-  .platform-android .action-sheet .button.active, .platform-android .action-sheet .active.toggleButton, .platform-android .action-sheet .active.untoggledButton, .platform-android .action-sheet .active.toggledButton,
+  .platform-android .action-sheet .button.active, .platform-android .action-sheet .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .platform-android .action-sheet .active.toggleButton, .platform-android .action-sheet .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .platform-android .action-sheet .active.untoggledButton, .platform-android .action-sheet .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .platform-android .action-sheet .active.toggledButton,
   .platform-android .action-sheet .button.activated,
+  .platform-android .action-sheet .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container
   .platform-android .action-sheet .activated.toggleButton,
+  .platform-android .action-sheet .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container
   .platform-android .action-sheet .activated.untoggledButton,
+  .platform-android .action-sheet .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container
   .platform-android .action-sheet .activated.toggledButton {
     background: #e8e8e8; }
 
@@ -3847,7 +3853,7 @@ a.subdued {
 .platform-android .action-sheet-cancel {
   display: none; }
 
-.platform-android .action-sheet-has-icons .button, .platform-android .action-sheet-has-icons .toggleButton, .platform-android .action-sheet-has-icons .untoggledButton, .platform-android .action-sheet-has-icons .toggledButton {
+.platform-android .action-sheet-has-icons .button, .platform-android .action-sheet-has-icons .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .platform-android .action-sheet-has-icons .toggleButton, .platform-android .action-sheet-has-icons .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .platform-android .action-sheet-has-icons .untoggledButton, .platform-android .action-sheet-has-icons .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .platform-android .action-sheet-has-icons .toggledButton {
   padding-left: 56px; }
 
 .backdrop {
@@ -3913,9 +3919,9 @@ a.subdued {
     border: none;
     background: none;
     color: #fff; }
-    .bar.bar-clear .button, .bar.bar-clear .toggleButton, .bar.bar-clear .untoggledButton, .bar.bar-clear .toggledButton {
+    .bar.bar-clear .button, .bar.bar-clear .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar.bar-clear .toggleButton, .bar.bar-clear .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar.bar-clear .untoggledButton, .bar.bar-clear .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar.bar-clear .toggledButton {
       color: #fff; }
-    .bar.bar-clear .title {
+    .bar.bar-clear .title, .bar.bar-clear .toggleBar .toggleLabel, .toggleBar .bar.bar-clear .toggleLabel {
       color: #fff; }
   .bar.item-input-inset .item-input-wrapper {
     margin-top: -1px; }
@@ -3929,7 +3935,7 @@ a.subdued {
     background-color: white;
     background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
     color: #444; }
-    .bar.bar-light .title {
+    .bar.bar-light .title, .bar.bar-light .toggleBar .toggleLabel, .toggleBar .bar.bar-light .toggleLabel {
       color: #444; }
     .bar.bar-light.bar-footer {
       background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%); }
@@ -3938,7 +3944,7 @@ a.subdued {
     background-color: #f8f8f8;
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
     color: #444; }
-    .bar.bar-stable .title {
+    .bar.bar-stable .title, .bar.bar-stable .toggleBar .toggleLabel, .toggleBar .bar.bar-stable .toggleLabel {
       color: #444; }
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
@@ -3947,7 +3953,7 @@ a.subdued {
     background-color: #387ef5;
     background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
     color: #fff; }
-    .bar.bar-positive .title {
+    .bar.bar-positive .title, .bar.bar-positive .toggleBar .toggleLabel, .toggleBar .bar.bar-positive .toggleLabel {
       color: #fff; }
     .bar.bar-positive.bar-footer {
       background-image: linear-gradient(180deg, #0c60ee, #0c60ee 50%, transparent 50%); }
@@ -3956,7 +3962,7 @@ a.subdued {
     background-color: #11c1f3;
     background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);
     color: #fff; }
-    .bar.bar-calm .title {
+    .bar.bar-calm .title, .bar.bar-calm .toggleBar .toggleLabel, .toggleBar .bar.bar-calm .toggleLabel {
       color: #fff; }
     .bar.bar-calm.bar-footer {
       background-image: linear-gradient(180deg, #0a9dc7, #0a9dc7 50%, transparent 50%); }
@@ -3965,7 +3971,7 @@ a.subdued {
     background-color: #ef473a;
     background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);
     color: #fff; }
-    .bar.bar-assertive .title {
+    .bar.bar-assertive .title, .bar.bar-assertive .toggleBar .toggleLabel, .toggleBar .bar.bar-assertive .toggleLabel {
       color: #fff; }
     .bar.bar-assertive.bar-footer {
       background-image: linear-gradient(180deg, #e42112, #e42112 50%, transparent 50%); }
@@ -3974,7 +3980,7 @@ a.subdued {
     background-color: #33cd5f;
     background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);
     color: #fff; }
-    .bar.bar-balanced .title {
+    .bar.bar-balanced .title, .bar.bar-balanced .toggleBar .toggleLabel, .toggleBar .bar.bar-balanced .toggleLabel {
       color: #fff; }
     .bar.bar-balanced.bar-footer {
       background-image: linear-gradient(180deg, #28a54c, #0c60ee 50%, transparent 50%); }
@@ -3983,7 +3989,7 @@ a.subdued {
     background-color: #ffc900;
     background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);
     color: #fff; }
-    .bar.bar-energized .title {
+    .bar.bar-energized .title, .bar.bar-energized .toggleBar .toggleLabel, .toggleBar .bar.bar-energized .toggleLabel {
       color: #fff; }
     .bar.bar-energized.bar-footer {
       background-image: linear-gradient(180deg, #e6b500, #e6b500 50%, transparent 50%); }
@@ -3992,7 +3998,7 @@ a.subdued {
     background-color: #886aea;
     background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);
     color: #fff; }
-    .bar.bar-royal .title {
+    .bar.bar-royal .title, .bar.bar-royal .toggleBar .toggleLabel, .toggleBar .bar.bar-royal .toggleLabel {
       color: #fff; }
     .bar.bar-royal.bar-footer {
       background-image: linear-gradient(180deg, #6b46e5, #6b46e5 50%, transparent 50%); }
@@ -4001,11 +4007,11 @@ a.subdued {
     background-color: #444444;
     background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);
     color: #fff; }
-    .bar.bar-dark .title {
+    .bar.bar-dark .title, .bar.bar-dark .toggleBar .toggleLabel, .toggleBar .bar.bar-dark .toggleLabel {
       color: #fff; }
     .bar.bar-dark.bar-footer {
       background-image: linear-gradient(180deg, #111, #111 50%, transparent 50%); }
-  .bar .title {
+  .bar .title, .bar .toggleBar .toggleLabel, .toggleBar .bar .toggleLabel {
     display: block;
     position: absolute;
     top: 0;
@@ -4022,13 +4028,13 @@ a.subdued {
     font-size: 17px;
     font-weight: 500;
     line-height: 44px; }
-    .bar .title.title-left {
+    .bar .title.title-left, .bar .toggleBar .title-left.toggleLabel, .toggleBar .bar .title-left.toggleLabel {
       text-align: left; }
-    .bar .title.title-right {
+    .bar .title.title-right, .bar .toggleBar .title-right.toggleLabel, .toggleBar .bar .title-right.toggleLabel {
       text-align: right; }
-  .bar .title a {
+  .bar .title a, .bar .toggleBar .toggleLabel a, .toggleBar .bar .toggleLabel a {
     color: inherit; }
-  .bar .button, .bar .toggleButton, .bar .untoggledButton, .bar .toggledButton, .bar button {
+  .bar .button, .bar .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar .toggleButton, .bar .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar .untoggledButton, .bar .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar .toggledButton, .bar button {
     z-index: 1;
     padding: 0 8px;
     min-width: initial;
@@ -4036,50 +4042,67 @@ a.subdued {
     font-weight: 400;
     font-size: 13px;
     line-height: 32px; }
-    .bar .button.button-icon:before, .bar .button-icon.toggleButton:before, .bar .button-icon.untoggledButton:before, .bar .button-icon.toggledButton:before,
+    .bar .button.button-icon:before, .bar .toggleBar .toggle-container .button-icon.toggleButton:before, .toggleBar .toggle-container .bar .button-icon.toggleButton:before, .bar .toggleBar .toggle-container .button-icon.untoggledButton:before, .toggleBar .toggle-container .bar .button-icon.untoggledButton:before, .bar .toggleBar .toggle-container .button-icon.toggledButton:before, .toggleBar .toggle-container .bar .button-icon.toggledButton:before,
     .bar .button .icon:before,
+    .bar .toggleBar .toggle-container .toggleButton .icon:before, .toggleBar .toggle-container
     .bar .toggleButton .icon:before,
+    .bar .toggleBar .toggle-container .untoggledButton .icon:before, .toggleBar .toggle-container
     .bar .untoggledButton .icon:before,
-    .bar .toggledButton .icon:before, .bar .button.icon:before, .bar .icon.toggleButton:before, .bar .icon.untoggledButton:before, .bar .icon.toggledButton:before, .bar .button.icon-left:before, .bar .icon-left.toggleButton:before, .bar .icon-left.untoggledButton:before, .bar .icon-left.toggledButton:before, .bar .button.icon-right:before, .bar .icon-right.toggleButton:before, .bar .icon-right.untoggledButton:before, .bar .icon-right.toggledButton:before, .bar button.button-icon:before,
+    .bar .toggleBar .toggle-container .toggledButton .icon:before, .toggleBar .toggle-container
+    .bar .toggledButton .icon:before, .bar .button.icon:before, .bar .toggleBar .toggle-container .icon.toggleButton:before, .toggleBar .toggle-container .bar .icon.toggleButton:before, .bar .toggleBar .toggle-container .icon.untoggledButton:before, .toggleBar .toggle-container .bar .icon.untoggledButton:before, .bar .toggleBar .toggle-container .icon.toggledButton:before, .toggleBar .toggle-container .bar .icon.toggledButton:before, .bar .button.icon-left:before, .bar .toggleBar .toggle-container .icon-left.toggleButton:before, .toggleBar .toggle-container .bar .icon-left.toggleButton:before, .bar .toggleBar .toggle-container .icon-left.untoggledButton:before, .toggleBar .toggle-container .bar .icon-left.untoggledButton:before, .bar .toggleBar .toggle-container .icon-left.toggledButton:before, .toggleBar .toggle-container .bar .icon-left.toggledButton:before, .bar .button.icon-right:before, .bar .toggleBar .toggle-container .icon-right.toggleButton:before, .toggleBar .toggle-container .bar .icon-right.toggleButton:before, .bar .toggleBar .toggle-container .icon-right.untoggledButton:before, .toggleBar .toggle-container .bar .icon-right.untoggledButton:before, .bar .toggleBar .toggle-container .icon-right.toggledButton:before, .toggleBar .toggle-container .bar .icon-right.toggledButton:before, .bar button.button-icon:before,
     .bar button .icon:before, .bar button.icon:before, .bar button.icon-left:before, .bar button.icon-right:before {
       padding-right: 2px;
       padding-left: 2px;
       font-size: 20px;
       line-height: 32px; }
-    .bar .button.button-icon, .bar .button-icon.toggleButton, .bar .button-icon.untoggledButton, .bar .button-icon.toggledButton, .bar button.button-icon {
+    .bar .button.button-icon, .bar .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar .button-icon.toggleButton, .bar .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar .button-icon.untoggledButton, .bar .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar .button-icon.toggledButton, .bar button.button-icon {
       font-size: 17px; }
-      .bar .button.button-icon .icon:before, .bar .button-icon.toggleButton .icon:before, .bar .button-icon.untoggledButton .icon:before, .bar .button-icon.toggledButton .icon:before, .bar .button.button-icon:before, .bar .button-icon.toggleButton:before, .bar .button-icon.untoggledButton:before, .bar .button-icon.toggledButton:before, .bar .button.button-icon.icon-left:before, .bar .button-icon.icon-left.toggleButton:before, .bar .button-icon.icon-left.untoggledButton:before, .bar .button-icon.icon-left.toggledButton:before, .bar .button.button-icon.icon-right:before, .bar .button-icon.icon-right.toggleButton:before, .bar .button-icon.icon-right.untoggledButton:before, .bar .button-icon.icon-right.toggledButton:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
+      .bar .button.button-icon .icon:before, .bar .toggleBar .toggle-container .button-icon.toggleButton .icon:before, .toggleBar .toggle-container .bar .button-icon.toggleButton .icon:before, .bar .toggleBar .toggle-container .button-icon.untoggledButton .icon:before, .toggleBar .toggle-container .bar .button-icon.untoggledButton .icon:before, .bar .toggleBar .toggle-container .button-icon.toggledButton .icon:before, .toggleBar .toggle-container .bar .button-icon.toggledButton .icon:before, .bar .button.button-icon:before, .bar .toggleBar .toggle-container .button-icon.toggleButton:before, .toggleBar .toggle-container .bar .button-icon.toggleButton:before, .bar .toggleBar .toggle-container .button-icon.untoggledButton:before, .toggleBar .toggle-container .bar .button-icon.untoggledButton:before, .bar .toggleBar .toggle-container .button-icon.toggledButton:before, .toggleBar .toggle-container .bar .button-icon.toggledButton:before, .bar .button.button-icon.icon-left:before, .bar .toggleBar .toggle-container .button-icon.icon-left.toggleButton:before, .toggleBar .toggle-container .bar .button-icon.icon-left.toggleButton:before, .bar .toggleBar .toggle-container .button-icon.icon-left.untoggledButton:before, .toggleBar .toggle-container .bar .button-icon.icon-left.untoggledButton:before, .bar .toggleBar .toggle-container .button-icon.icon-left.toggledButton:before, .toggleBar .toggle-container .bar .button-icon.icon-left.toggledButton:before, .bar .button.button-icon.icon-right:before, .bar .toggleBar .toggle-container .button-icon.icon-right.toggleButton:before, .toggleBar .toggle-container .bar .button-icon.icon-right.toggleButton:before, .bar .toggleBar .toggle-container .button-icon.icon-right.untoggledButton:before, .toggleBar .toggle-container .bar .button-icon.icon-right.untoggledButton:before, .bar .toggleBar .toggle-container .button-icon.icon-right.toggledButton:before, .toggleBar .toggle-container .bar .button-icon.icon-right.toggledButton:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
         vertical-align: top;
         font-size: 32px;
         line-height: 32px; }
-    .bar .button.button-clear, .bar .button-clear.toggleButton, .bar .button-clear.untoggledButton, .bar .button-clear.toggledButton, .bar button.button-clear {
+    .bar .button.button-clear, .bar .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar .button-clear.toggleButton, .bar .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar .button-clear.untoggledButton, .bar .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar .button-clear.toggledButton, .bar button.button-clear {
       padding-right: 2px;
       padding-left: 2px;
       font-weight: 300;
       font-size: 17px; }
-      .bar .button.button-clear .icon:before, .bar .button-clear.toggleButton .icon:before, .bar .button-clear.untoggledButton .icon:before, .bar .button-clear.toggledButton .icon:before, .bar .button.button-clear.icon:before, .bar .button-clear.icon.toggleButton:before, .bar .button-clear.icon.untoggledButton:before, .bar .button-clear.icon.toggledButton:before, .bar .button.button-clear.icon-left:before, .bar .button-clear.icon-left.toggleButton:before, .bar .button-clear.icon-left.untoggledButton:before, .bar .button-clear.icon-left.toggledButton:before, .bar .button.button-clear.icon-right:before, .bar .button-clear.icon-right.toggleButton:before, .bar .button-clear.icon-right.untoggledButton:before, .bar .button-clear.icon-right.toggledButton:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before, .bar button.button-clear.icon-left:before, .bar button.button-clear.icon-right:before {
+      .bar .button.button-clear .icon:before, .bar .toggleBar .toggle-container .button-clear.toggleButton .icon:before, .toggleBar .toggle-container .bar .button-clear.toggleButton .icon:before, .bar .toggleBar .toggle-container .button-clear.untoggledButton .icon:before, .toggleBar .toggle-container .bar .button-clear.untoggledButton .icon:before, .bar .toggleBar .toggle-container .button-clear.toggledButton .icon:before, .toggleBar .toggle-container .bar .button-clear.toggledButton .icon:before, .bar .button.button-clear.icon:before, .bar .toggleBar .toggle-container .button-clear.icon.toggleButton:before, .toggleBar .toggle-container .bar .button-clear.icon.toggleButton:before, .bar .toggleBar .toggle-container .button-clear.icon.untoggledButton:before, .toggleBar .toggle-container .bar .button-clear.icon.untoggledButton:before, .bar .toggleBar .toggle-container .button-clear.icon.toggledButton:before, .toggleBar .toggle-container .bar .button-clear.icon.toggledButton:before, .bar .button.button-clear.icon-left:before, .bar .toggleBar .toggle-container .button-clear.icon-left.toggleButton:before, .toggleBar .toggle-container .bar .button-clear.icon-left.toggleButton:before, .bar .toggleBar .toggle-container .button-clear.icon-left.untoggledButton:before, .toggleBar .toggle-container .bar .button-clear.icon-left.untoggledButton:before, .bar .toggleBar .toggle-container .button-clear.icon-left.toggledButton:before, .toggleBar .toggle-container .bar .button-clear.icon-left.toggledButton:before, .bar .button.button-clear.icon-right:before, .bar .toggleBar .toggle-container .button-clear.icon-right.toggleButton:before, .toggleBar .toggle-container .bar .button-clear.icon-right.toggleButton:before, .bar .toggleBar .toggle-container .button-clear.icon-right.untoggledButton:before, .toggleBar .toggle-container .bar .button-clear.icon-right.untoggledButton:before, .bar .toggleBar .toggle-container .button-clear.icon-right.toggledButton:before, .toggleBar .toggle-container .bar .button-clear.icon-right.toggledButton:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before, .bar button.button-clear.icon-left:before, .bar button.button-clear.icon-right:before {
         font-size: 32px;
         line-height: 32px; }
-    .bar .button.back-button, .bar .back-button.toggleButton, .bar .back-button.untoggledButton, .bar .back-button.toggledButton, .bar button.back-button {
+    .bar .button.back-button, .bar .toggleBar .toggle-container .back-button.toggleButton, .toggleBar .toggle-container .bar .back-button.toggleButton, .bar .toggleBar .toggle-container .back-button.untoggledButton, .toggleBar .toggle-container .bar .back-button.untoggledButton, .bar .toggleBar .toggle-container .back-button.toggledButton, .toggleBar .toggle-container .bar .back-button.toggledButton, .bar button.back-button {
       display: block;
       margin-right: 5px;
       padding: 0;
       white-space: nowrap;
       font-weight: 400; }
-    .bar .button.back-button.active, .bar .back-button.active.toggleButton, .bar .back-button.active.untoggledButton, .bar .back-button.active.toggledButton, .bar .button.back-button.activated, .bar .back-button.activated.toggleButton, .bar .back-button.activated.untoggledButton, .bar .back-button.activated.toggledButton, .bar button.back-button.active, .bar button.back-button.activated {
+    .bar .button.back-button.active, .bar .toggleBar .toggle-container .back-button.active.toggleButton, .toggleBar .toggle-container .bar .back-button.active.toggleButton, .bar .toggleBar .toggle-container .back-button.active.untoggledButton, .toggleBar .toggle-container .bar .back-button.active.untoggledButton, .bar .toggleBar .toggle-container .back-button.active.toggledButton, .toggleBar .toggle-container .bar .back-button.active.toggledButton, .bar .button.back-button.activated, .bar .toggleBar .toggle-container .back-button.activated.toggleButton, .toggleBar .toggle-container .bar .back-button.activated.toggleButton, .bar .toggleBar .toggle-container .back-button.activated.untoggledButton, .toggleBar .toggle-container .bar .back-button.activated.untoggledButton, .bar .toggleBar .toggle-container .back-button.activated.toggledButton, .toggleBar .toggle-container .bar .back-button.activated.toggledButton, .bar button.back-button.active, .bar button.back-button.activated {
       opacity: 0.2; }
-  .bar .button-bar > .button, .bar .button-bar > .toggleButton, .bar .button-bar > .untoggledButton, .bar .button-bar > .toggledButton,
+  .bar .button-bar > .button, .bar .toggleBar .toggle-container > .button, .toggleBar .bar .toggle-container > .button, .bar .toggleBar .toggle-container .button-bar > .toggleButton, .toggleBar .toggle-container .bar .button-bar > .toggleButton, .bar .toggleBar .toggle-container > .toggleButton, .toggleBar .bar .toggle-container > .toggleButton, .bar .toggleBar .toggle-container .button-bar > .untoggledButton, .toggleBar .toggle-container .bar .button-bar > .untoggledButton, .bar .toggleBar .toggle-container > .untoggledButton, .toggleBar .bar .toggle-container > .untoggledButton, .bar .toggleBar .toggle-container .button-bar > .toggledButton, .toggleBar .toggle-container .bar .button-bar > .toggledButton, .bar .toggleBar .toggle-container > .toggledButton, .toggleBar .bar .toggle-container > .toggledButton,
   .bar .buttons > .button,
+  .bar .toggleBar .toggle-container .buttons > .toggleButton, .toggleBar .toggle-container
   .bar .buttons > .toggleButton,
+  .bar .toggleBar .toggle-container .buttons > .untoggledButton, .toggleBar .toggle-container
   .bar .buttons > .untoggledButton,
+  .bar .toggleBar .toggle-container .buttons > .toggledButton, .toggleBar .toggle-container
   .bar .buttons > .toggledButton {
     min-height: 31px;
     line-height: 32px; }
-  .bar .button-bar + .button, .bar .button-bar + .toggleButton, .bar .button-bar + .untoggledButton, .bar .button-bar + .toggledButton,
+  .bar .button-bar + .button, .bar .toggleBar .toggle-container + .button, .toggleBar .bar .toggle-container + .button, .bar .toggleBar .toggle-container .button-bar + .toggleButton, .toggleBar .toggle-container .bar .button-bar + .toggleButton, .bar .toggleBar .toggle-container .toggle-container + .toggleButton, .toggleBar .bar .toggle-container .toggle-container + .toggleButton, .toggleBar .toggle-container .bar .toggle-container + .toggleButton, .bar .toggleBar .toggle-container .button-bar + .untoggledButton, .toggleBar .toggle-container .bar .button-bar + .untoggledButton, .bar .toggleBar .toggle-container .toggle-container + .untoggledButton, .toggleBar .bar .toggle-container .toggle-container + .untoggledButton, .toggleBar .toggle-container .bar .toggle-container + .untoggledButton, .bar .toggleBar .toggle-container .button-bar + .toggledButton, .toggleBar .toggle-container .bar .button-bar + .toggledButton, .bar .toggleBar .toggle-container .toggle-container + .toggledButton, .toggleBar .bar .toggle-container .toggle-container + .toggledButton, .toggleBar .toggle-container .bar .toggle-container + .toggledButton,
   .bar .button + .button-bar,
+  .bar .toggleBar .toggle-container .toggleButton + .button-bar, .toggleBar .toggle-container
   .bar .toggleButton + .button-bar,
+  .bar .toggleBar .toggle-container .untoggledButton + .button-bar, .toggleBar .toggle-container
   .bar .untoggledButton + .button-bar,
-  .bar .toggledButton + .button-bar {
+  .bar .toggleBar .toggle-container .toggledButton + .button-bar, .toggleBar .toggle-container
+  .bar .toggledButton + .button-bar,
+  .bar .toggleBar .button + .toggle-container, .toggleBar
+  .bar .button + .toggle-container,
+  .bar .toggleBar .toggle-container .toggleButton + .toggle-container, .toggleBar .toggle-container
+  .bar .toggleButton + .toggle-container,
+  .bar .toggleBar .toggle-container .untoggledButton + .toggle-container, .toggleBar .toggle-container
+  .bar .untoggledButton + .toggle-container,
+  .bar .toggleBar .toggle-container .toggledButton + .toggle-container, .toggleBar .toggle-container
+  .bar .toggledButton + .toggle-container {
     margin-left: 5px; }
   .bar .buttons,
   .bar .buttons.primary-buttons,
@@ -4093,29 +4116,31 @@ a.subdued {
   .bar .buttons-right span {
     margin-left: 5px;
     display: inherit; }
-  .bar .title + .button:last-child, .bar .title + .toggleButton:last-child, .bar .title + .untoggledButton:last-child, .bar .title + .toggledButton:last-child,
-  .bar > .button + .button:last-child,
-  .bar > .toggleButton + .button:last-child,
-  .bar > .untoggledButton + .button:last-child,
-  .bar > .toggledButton + .button:last-child,
-  .bar > .button + .toggleButton:last-child,
-  .bar > .toggleButton + .toggleButton:last-child,
-  .bar > .untoggledButton + .toggleButton:last-child,
-  .bar > .toggledButton + .toggleButton:last-child,
-  .bar > .button + .untoggledButton:last-child,
-  .bar > .toggleButton + .untoggledButton:last-child,
-  .bar > .untoggledButton + .untoggledButton:last-child,
-  .bar > .toggledButton + .untoggledButton:last-child,
-  .bar > .button + .toggledButton:last-child,
-  .bar > .toggleButton + .toggledButton:last-child,
-  .bar > .untoggledButton + .toggledButton:last-child,
+  .bar .title + .button:last-child, .bar .toggleBar .toggleLabel + .button:last-child, .toggleBar .bar .toggleLabel + .button:last-child, .bar .toggleBar .toggle-container .title + .toggleButton:last-child, .toggleBar .toggle-container .bar .title + .toggleButton:last-child, .bar .toggleBar .toggle-container .toggleLabel + .toggleButton:last-child, .toggleBar .bar .toggle-container .toggleLabel + .toggleButton:last-child, .toggleBar .toggle-container .bar .toggleLabel + .toggleButton:last-child, .bar .toggleBar .toggle-container .title + .untoggledButton:last-child, .toggleBar .toggle-container .bar .title + .untoggledButton:last-child, .bar .toggleBar .toggle-container .toggleLabel + .untoggledButton:last-child, .toggleBar .bar .toggle-container .toggleLabel + .untoggledButton:last-child, .toggleBar .toggle-container .bar .toggleLabel + .untoggledButton:last-child, .bar .toggleBar .toggle-container .title + .toggledButton:last-child, .toggleBar .toggle-container .bar .title + .toggledButton:last-child, .bar .toggleBar .toggle-container .toggleLabel + .toggledButton:last-child, .toggleBar .bar .toggle-container .toggleLabel + .toggledButton:last-child, .toggleBar .toggle-container .bar .toggleLabel + .toggledButton:last-child,
+  .bar > .button + .button:last-child, .toggleBar .toggle-container
+  .bar > .toggleButton + .button:last-child, .toggleBar .toggle-container
+  .bar > .untoggledButton + .button:last-child, .toggleBar .toggle-container
+  .bar > .toggledButton + .button:last-child, .toggleBar .toggle-container
+  .bar > .button + .toggleButton:last-child, .toggleBar .toggle-container
+  .bar > .toggleButton + .toggleButton:last-child, .toggleBar .toggle-container
+  .bar > .untoggledButton + .toggleButton:last-child, .toggleBar .toggle-container
+  .bar > .toggledButton + .toggleButton:last-child, .toggleBar .toggle-container
+  .bar > .button + .untoggledButton:last-child, .toggleBar .toggle-container
+  .bar > .toggleButton + .untoggledButton:last-child, .toggleBar .toggle-container
+  .bar > .untoggledButton + .untoggledButton:last-child, .toggleBar .toggle-container
+  .bar > .toggledButton + .untoggledButton:last-child, .toggleBar .toggle-container
+  .bar > .button + .toggledButton:last-child, .toggleBar .toggle-container
+  .bar > .toggleButton + .toggledButton:last-child, .toggleBar .toggle-container
+  .bar > .untoggledButton + .toggledButton:last-child, .toggleBar .toggle-container
   .bar > .toggledButton + .toggledButton:last-child,
-  .bar > .button.pull-right,
-  .bar > .pull-right.toggleButton,
-  .bar > .pull-right.untoggledButton,
+  .bar > .button.pull-right, .toggleBar .toggle-container
+  .bar > .pull-right.toggleButton, .toggleBar .toggle-container
+  .bar > .pull-right.untoggledButton, .toggleBar .toggle-container
   .bar > .pull-right.toggledButton,
   .bar .buttons.pull-right,
-  .bar .title + .buttons {
+  .bar .title + .buttons,
+  .bar .toggleBar .toggleLabel + .buttons, .toggleBar
+  .bar .toggleLabel + .buttons {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -4127,178 +4152,178 @@ a.subdued {
 .platform-android .bar .back-button .icon:before {
   font-size: 24px; }
 
-.platform-android .bar .title {
+.platform-android .bar .title, .platform-android .bar .toggleBar .toggleLabel, .toggleBar .platform-android .bar .toggleLabel {
   font-size: 19px;
   line-height: 44px; }
 
-.bar-light .button, .bar-light .toggleButton, .bar-light .untoggledButton, .bar-light .toggledButton {
+.bar-light .button, .bar-light .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-light .toggleButton, .bar-light .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-light .untoggledButton, .bar-light .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-light .toggledButton {
   border-color: transparent;
   background-color: white;
   color: #444; }
-  .bar-light .button:hover, .bar-light .toggleButton:hover, .bar-light .untoggledButton:hover, .bar-light .toggledButton:hover {
+  .bar-light .button:hover, .bar-light .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-light .toggleButton:hover, .bar-light .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-light .untoggledButton:hover, .bar-light .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-light .toggledButton:hover {
     color: #444;
     text-decoration: none; }
-  .bar-light .button.active, .bar-light .active.toggleButton, .bar-light .active.untoggledButton, .bar-light .active.toggledButton, .bar-light .button.activated, .bar-light .activated.toggleButton, .bar-light .activated.untoggledButton, .bar-light .activated.toggledButton {
+  .bar-light .button.active, .bar-light .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-light .active.toggleButton, .bar-light .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-light .active.untoggledButton, .bar-light .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-light .active.toggledButton, .bar-light .button.activated, .bar-light .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-light .activated.toggleButton, .bar-light .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-light .activated.untoggledButton, .bar-light .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-light .activated.toggledButton {
     background-color: #fafafa; }
-  .bar-light .button.button-clear, .bar-light .button-clear.toggleButton, .bar-light .button-clear.untoggledButton, .bar-light .button-clear.toggledButton {
+  .bar-light .button.button-clear, .bar-light .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-light .button-clear.toggleButton, .bar-light .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-light .button-clear.untoggledButton, .bar-light .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-light .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #444;
     font-size: 17px; }
-  .bar-light .button.button-icon, .bar-light .button-icon.toggleButton, .bar-light .button-icon.untoggledButton, .bar-light .button-icon.toggledButton {
+  .bar-light .button.button-icon, .bar-light .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-light .button-icon.toggleButton, .bar-light .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-light .button-icon.untoggledButton, .bar-light .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-light .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
-.bar-stable .button, .bar-stable .toggleButton, .bar-stable .untoggledButton, .bar-stable .toggledButton {
+.bar-stable .button, .bar-stable .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-stable .toggleButton, .bar-stable .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-stable .untoggledButton, .bar-stable .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-stable .toggledButton {
   border-color: transparent;
   background-color: #f8f8f8;
   color: #444; }
-  .bar-stable .button:hover, .bar-stable .toggleButton:hover, .bar-stable .untoggledButton:hover, .bar-stable .toggledButton:hover {
+  .bar-stable .button:hover, .bar-stable .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-stable .toggleButton:hover, .bar-stable .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-stable .untoggledButton:hover, .bar-stable .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-stable .toggledButton:hover {
     color: #444;
     text-decoration: none; }
-  .bar-stable .button.active, .bar-stable .active.toggleButton, .bar-stable .active.untoggledButton, .bar-stable .active.toggledButton, .bar-stable .button.activated, .bar-stable .activated.toggleButton, .bar-stable .activated.untoggledButton, .bar-stable .activated.toggledButton {
+  .bar-stable .button.active, .bar-stable .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-stable .active.toggleButton, .bar-stable .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-stable .active.untoggledButton, .bar-stable .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-stable .active.toggledButton, .bar-stable .button.activated, .bar-stable .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-stable .activated.toggleButton, .bar-stable .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-stable .activated.untoggledButton, .bar-stable .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-stable .activated.toggledButton {
     background-color: #e5e5e5; }
-  .bar-stable .button.button-clear, .bar-stable .button-clear.toggleButton, .bar-stable .button-clear.untoggledButton, .bar-stable .button-clear.toggledButton {
+  .bar-stable .button.button-clear, .bar-stable .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-stable .button-clear.toggleButton, .bar-stable .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-stable .button-clear.untoggledButton, .bar-stable .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-stable .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #444;
     font-size: 17px; }
-  .bar-stable .button.button-icon, .bar-stable .button-icon.toggleButton, .bar-stable .button-icon.untoggledButton, .bar-stable .button-icon.toggledButton {
+  .bar-stable .button.button-icon, .bar-stable .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-stable .button-icon.toggleButton, .bar-stable .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-stable .button-icon.untoggledButton, .bar-stable .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-stable .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
-.bar-positive .button, .bar-positive .toggleButton, .bar-positive .untoggledButton, .bar-positive .toggledButton {
+.bar-positive .button, .bar-positive .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-positive .toggleButton, .bar-positive .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-positive .untoggledButton, .bar-positive .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-positive .toggledButton {
   border-color: transparent;
   background-color: #387ef5;
   color: #fff; }
-  .bar-positive .button:hover, .bar-positive .toggleButton:hover, .bar-positive .untoggledButton:hover, .bar-positive .toggledButton:hover {
+  .bar-positive .button:hover, .bar-positive .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-positive .toggleButton:hover, .bar-positive .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-positive .untoggledButton:hover, .bar-positive .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-positive .toggledButton:hover {
     color: #fff;
     text-decoration: none; }
-  .bar-positive .button.active, .bar-positive .active.toggleButton, .bar-positive .active.untoggledButton, .bar-positive .active.toggledButton, .bar-positive .button.activated, .bar-positive .activated.toggleButton, .bar-positive .activated.untoggledButton, .bar-positive .activated.toggledButton {
+  .bar-positive .button.active, .bar-positive .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-positive .active.toggleButton, .bar-positive .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-positive .active.untoggledButton, .bar-positive .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-positive .active.toggledButton, .bar-positive .button.activated, .bar-positive .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-positive .activated.toggleButton, .bar-positive .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-positive .activated.untoggledButton, .bar-positive .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-positive .activated.toggledButton {
     background-color: #0c60ee; }
-  .bar-positive .button.button-clear, .bar-positive .button-clear.toggleButton, .bar-positive .button-clear.untoggledButton, .bar-positive .button-clear.toggledButton {
+  .bar-positive .button.button-clear, .bar-positive .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-positive .button-clear.toggleButton, .bar-positive .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-positive .button-clear.untoggledButton, .bar-positive .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-positive .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #fff;
     font-size: 17px; }
-  .bar-positive .button.button-icon, .bar-positive .button-icon.toggleButton, .bar-positive .button-icon.untoggledButton, .bar-positive .button-icon.toggledButton {
+  .bar-positive .button.button-icon, .bar-positive .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-positive .button-icon.toggleButton, .bar-positive .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-positive .button-icon.untoggledButton, .bar-positive .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-positive .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
-.bar-calm .button, .bar-calm .toggleButton, .bar-calm .untoggledButton, .bar-calm .toggledButton {
+.bar-calm .button, .bar-calm .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-calm .toggleButton, .bar-calm .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-calm .untoggledButton, .bar-calm .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-calm .toggledButton {
   border-color: transparent;
   background-color: #11c1f3;
   color: #fff; }
-  .bar-calm .button:hover, .bar-calm .toggleButton:hover, .bar-calm .untoggledButton:hover, .bar-calm .toggledButton:hover {
+  .bar-calm .button:hover, .bar-calm .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-calm .toggleButton:hover, .bar-calm .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-calm .untoggledButton:hover, .bar-calm .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-calm .toggledButton:hover {
     color: #fff;
     text-decoration: none; }
-  .bar-calm .button.active, .bar-calm .active.toggleButton, .bar-calm .active.untoggledButton, .bar-calm .active.toggledButton, .bar-calm .button.activated, .bar-calm .activated.toggleButton, .bar-calm .activated.untoggledButton, .bar-calm .activated.toggledButton {
+  .bar-calm .button.active, .bar-calm .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-calm .active.toggleButton, .bar-calm .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-calm .active.untoggledButton, .bar-calm .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-calm .active.toggledButton, .bar-calm .button.activated, .bar-calm .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-calm .activated.toggleButton, .bar-calm .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-calm .activated.untoggledButton, .bar-calm .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-calm .activated.toggledButton {
     background-color: #0a9dc7; }
-  .bar-calm .button.button-clear, .bar-calm .button-clear.toggleButton, .bar-calm .button-clear.untoggledButton, .bar-calm .button-clear.toggledButton {
+  .bar-calm .button.button-clear, .bar-calm .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-calm .button-clear.toggleButton, .bar-calm .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-calm .button-clear.untoggledButton, .bar-calm .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-calm .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #fff;
     font-size: 17px; }
-  .bar-calm .button.button-icon, .bar-calm .button-icon.toggleButton, .bar-calm .button-icon.untoggledButton, .bar-calm .button-icon.toggledButton {
+  .bar-calm .button.button-icon, .bar-calm .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-calm .button-icon.toggleButton, .bar-calm .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-calm .button-icon.untoggledButton, .bar-calm .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-calm .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
-.bar-assertive .button, .bar-assertive .toggleButton, .bar-assertive .untoggledButton, .bar-assertive .toggledButton {
+.bar-assertive .button, .bar-assertive .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-assertive .toggleButton, .bar-assertive .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-assertive .untoggledButton, .bar-assertive .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-assertive .toggledButton {
   border-color: transparent;
   background-color: #ef473a;
   color: #fff; }
-  .bar-assertive .button:hover, .bar-assertive .toggleButton:hover, .bar-assertive .untoggledButton:hover, .bar-assertive .toggledButton:hover {
+  .bar-assertive .button:hover, .bar-assertive .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-assertive .toggleButton:hover, .bar-assertive .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-assertive .untoggledButton:hover, .bar-assertive .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-assertive .toggledButton:hover {
     color: #fff;
     text-decoration: none; }
-  .bar-assertive .button.active, .bar-assertive .active.toggleButton, .bar-assertive .active.untoggledButton, .bar-assertive .active.toggledButton, .bar-assertive .button.activated, .bar-assertive .activated.toggleButton, .bar-assertive .activated.untoggledButton, .bar-assertive .activated.toggledButton {
+  .bar-assertive .button.active, .bar-assertive .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-assertive .active.toggleButton, .bar-assertive .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-assertive .active.untoggledButton, .bar-assertive .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-assertive .active.toggledButton, .bar-assertive .button.activated, .bar-assertive .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-assertive .activated.toggleButton, .bar-assertive .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-assertive .activated.untoggledButton, .bar-assertive .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-assertive .activated.toggledButton {
     background-color: #e42112; }
-  .bar-assertive .button.button-clear, .bar-assertive .button-clear.toggleButton, .bar-assertive .button-clear.untoggledButton, .bar-assertive .button-clear.toggledButton {
+  .bar-assertive .button.button-clear, .bar-assertive .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-assertive .button-clear.toggleButton, .bar-assertive .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-assertive .button-clear.untoggledButton, .bar-assertive .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-assertive .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #fff;
     font-size: 17px; }
-  .bar-assertive .button.button-icon, .bar-assertive .button-icon.toggleButton, .bar-assertive .button-icon.untoggledButton, .bar-assertive .button-icon.toggledButton {
+  .bar-assertive .button.button-icon, .bar-assertive .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-assertive .button-icon.toggleButton, .bar-assertive .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-assertive .button-icon.untoggledButton, .bar-assertive .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-assertive .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
-.bar-balanced .button, .bar-balanced .toggleButton, .bar-balanced .untoggledButton, .bar-balanced .toggledButton {
+.bar-balanced .button, .bar-balanced .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-balanced .toggleButton, .bar-balanced .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-balanced .untoggledButton, .bar-balanced .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-balanced .toggledButton {
   border-color: transparent;
   background-color: #33cd5f;
   color: #fff; }
-  .bar-balanced .button:hover, .bar-balanced .toggleButton:hover, .bar-balanced .untoggledButton:hover, .bar-balanced .toggledButton:hover {
+  .bar-balanced .button:hover, .bar-balanced .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-balanced .toggleButton:hover, .bar-balanced .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-balanced .untoggledButton:hover, .bar-balanced .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-balanced .toggledButton:hover {
     color: #fff;
     text-decoration: none; }
-  .bar-balanced .button.active, .bar-balanced .active.toggleButton, .bar-balanced .active.untoggledButton, .bar-balanced .active.toggledButton, .bar-balanced .button.activated, .bar-balanced .activated.toggleButton, .bar-balanced .activated.untoggledButton, .bar-balanced .activated.toggledButton {
+  .bar-balanced .button.active, .bar-balanced .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-balanced .active.toggleButton, .bar-balanced .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-balanced .active.untoggledButton, .bar-balanced .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-balanced .active.toggledButton, .bar-balanced .button.activated, .bar-balanced .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-balanced .activated.toggleButton, .bar-balanced .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-balanced .activated.untoggledButton, .bar-balanced .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-balanced .activated.toggledButton {
     background-color: #28a54c; }
-  .bar-balanced .button.button-clear, .bar-balanced .button-clear.toggleButton, .bar-balanced .button-clear.untoggledButton, .bar-balanced .button-clear.toggledButton {
+  .bar-balanced .button.button-clear, .bar-balanced .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-balanced .button-clear.toggleButton, .bar-balanced .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-balanced .button-clear.untoggledButton, .bar-balanced .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-balanced .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #fff;
     font-size: 17px; }
-  .bar-balanced .button.button-icon, .bar-balanced .button-icon.toggleButton, .bar-balanced .button-icon.untoggledButton, .bar-balanced .button-icon.toggledButton {
+  .bar-balanced .button.button-icon, .bar-balanced .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-balanced .button-icon.toggleButton, .bar-balanced .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-balanced .button-icon.untoggledButton, .bar-balanced .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-balanced .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
-.bar-energized .button, .bar-energized .toggleButton, .bar-energized .untoggledButton, .bar-energized .toggledButton {
+.bar-energized .button, .bar-energized .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-energized .toggleButton, .bar-energized .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-energized .untoggledButton, .bar-energized .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-energized .toggledButton {
   border-color: transparent;
   background-color: #ffc900;
   color: #fff; }
-  .bar-energized .button:hover, .bar-energized .toggleButton:hover, .bar-energized .untoggledButton:hover, .bar-energized .toggledButton:hover {
+  .bar-energized .button:hover, .bar-energized .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-energized .toggleButton:hover, .bar-energized .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-energized .untoggledButton:hover, .bar-energized .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-energized .toggledButton:hover {
     color: #fff;
     text-decoration: none; }
-  .bar-energized .button.active, .bar-energized .active.toggleButton, .bar-energized .active.untoggledButton, .bar-energized .active.toggledButton, .bar-energized .button.activated, .bar-energized .activated.toggleButton, .bar-energized .activated.untoggledButton, .bar-energized .activated.toggledButton {
+  .bar-energized .button.active, .bar-energized .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-energized .active.toggleButton, .bar-energized .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-energized .active.untoggledButton, .bar-energized .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-energized .active.toggledButton, .bar-energized .button.activated, .bar-energized .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-energized .activated.toggleButton, .bar-energized .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-energized .activated.untoggledButton, .bar-energized .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-energized .activated.toggledButton {
     background-color: #e6b500; }
-  .bar-energized .button.button-clear, .bar-energized .button-clear.toggleButton, .bar-energized .button-clear.untoggledButton, .bar-energized .button-clear.toggledButton {
+  .bar-energized .button.button-clear, .bar-energized .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-energized .button-clear.toggleButton, .bar-energized .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-energized .button-clear.untoggledButton, .bar-energized .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-energized .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #fff;
     font-size: 17px; }
-  .bar-energized .button.button-icon, .bar-energized .button-icon.toggleButton, .bar-energized .button-icon.untoggledButton, .bar-energized .button-icon.toggledButton {
+  .bar-energized .button.button-icon, .bar-energized .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-energized .button-icon.toggleButton, .bar-energized .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-energized .button-icon.untoggledButton, .bar-energized .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-energized .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
-.bar-royal .button, .bar-royal .toggleButton, .bar-royal .untoggledButton, .bar-royal .toggledButton {
+.bar-royal .button, .bar-royal .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-royal .toggleButton, .bar-royal .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-royal .untoggledButton, .bar-royal .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-royal .toggledButton {
   border-color: transparent;
   background-color: #886aea;
   color: #fff; }
-  .bar-royal .button:hover, .bar-royal .toggleButton:hover, .bar-royal .untoggledButton:hover, .bar-royal .toggledButton:hover {
+  .bar-royal .button:hover, .bar-royal .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-royal .toggleButton:hover, .bar-royal .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-royal .untoggledButton:hover, .bar-royal .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-royal .toggledButton:hover {
     color: #fff;
     text-decoration: none; }
-  .bar-royal .button.active, .bar-royal .active.toggleButton, .bar-royal .active.untoggledButton, .bar-royal .active.toggledButton, .bar-royal .button.activated, .bar-royal .activated.toggleButton, .bar-royal .activated.untoggledButton, .bar-royal .activated.toggledButton {
+  .bar-royal .button.active, .bar-royal .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-royal .active.toggleButton, .bar-royal .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-royal .active.untoggledButton, .bar-royal .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-royal .active.toggledButton, .bar-royal .button.activated, .bar-royal .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-royal .activated.toggleButton, .bar-royal .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-royal .activated.untoggledButton, .bar-royal .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-royal .activated.toggledButton {
     background-color: #6b46e5; }
-  .bar-royal .button.button-clear, .bar-royal .button-clear.toggleButton, .bar-royal .button-clear.untoggledButton, .bar-royal .button-clear.toggledButton {
+  .bar-royal .button.button-clear, .bar-royal .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-royal .button-clear.toggleButton, .bar-royal .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-royal .button-clear.untoggledButton, .bar-royal .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-royal .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #fff;
     font-size: 17px; }
-  .bar-royal .button.button-icon, .bar-royal .button-icon.toggleButton, .bar-royal .button-icon.untoggledButton, .bar-royal .button-icon.toggledButton {
+  .bar-royal .button.button-icon, .bar-royal .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-royal .button-icon.toggleButton, .bar-royal .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-royal .button-icon.untoggledButton, .bar-royal .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-royal .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
-.bar-dark .button, .bar-dark .toggleButton, .bar-dark .untoggledButton, .bar-dark .toggledButton {
+.bar-dark .button, .bar-dark .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .bar-dark .toggleButton, .bar-dark .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .bar-dark .untoggledButton, .bar-dark .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .bar-dark .toggledButton {
   border-color: transparent;
   background-color: #444444;
   color: #fff; }
-  .bar-dark .button:hover, .bar-dark .toggleButton:hover, .bar-dark .untoggledButton:hover, .bar-dark .toggledButton:hover {
+  .bar-dark .button:hover, .bar-dark .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .bar-dark .toggleButton:hover, .bar-dark .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .bar-dark .untoggledButton:hover, .bar-dark .toggleBar .toggle-container .toggledButton:hover, .toggleBar .toggle-container .bar-dark .toggledButton:hover {
     color: #fff;
     text-decoration: none; }
-  .bar-dark .button.active, .bar-dark .active.toggleButton, .bar-dark .active.untoggledButton, .bar-dark .active.toggledButton, .bar-dark .button.activated, .bar-dark .activated.toggleButton, .bar-dark .activated.untoggledButton, .bar-dark .activated.toggledButton {
+  .bar-dark .button.active, .bar-dark .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .bar-dark .active.toggleButton, .bar-dark .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .bar-dark .active.untoggledButton, .bar-dark .toggleBar .toggle-container .active.toggledButton, .toggleBar .toggle-container .bar-dark .active.toggledButton, .bar-dark .button.activated, .bar-dark .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .bar-dark .activated.toggleButton, .bar-dark .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .bar-dark .activated.untoggledButton, .bar-dark .toggleBar .toggle-container .activated.toggledButton, .toggleBar .toggle-container .bar-dark .activated.toggledButton {
     background-color: #262626; }
-  .bar-dark .button.button-clear, .bar-dark .button-clear.toggleButton, .bar-dark .button-clear.untoggledButton, .bar-dark .button-clear.toggledButton {
+  .bar-dark .button.button-clear, .bar-dark .toggleBar .toggle-container .button-clear.toggleButton, .toggleBar .toggle-container .bar-dark .button-clear.toggleButton, .bar-dark .toggleBar .toggle-container .button-clear.untoggledButton, .toggleBar .toggle-container .bar-dark .button-clear.untoggledButton, .bar-dark .toggleBar .toggle-container .button-clear.toggledButton, .toggleBar .toggle-container .bar-dark .button-clear.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #fff;
     font-size: 17px; }
-  .bar-dark .button.button-icon, .bar-dark .button-icon.toggleButton, .bar-dark .button-icon.untoggledButton, .bar-dark .button-icon.toggledButton {
+  .bar-dark .button.button-icon, .bar-dark .toggleBar .toggle-container .button-icon.toggleButton, .toggleBar .toggle-container .bar-dark .button-icon.toggleButton, .bar-dark .toggleBar .toggle-container .button-icon.untoggledButton, .toggleBar .toggle-container .bar-dark .button-icon.untoggledButton, .bar-dark .toggleBar .toggle-container .button-icon.toggledButton, .toggleBar .toggle-container .bar-dark .button-icon.toggledButton {
     border-color: transparent;
     background: none; }
 
@@ -5604,7 +5629,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   flex-direction: row;
   padding: 10px;
   min-height: 65px; }
-  .popup-buttons .button, .popup-buttons .toggleButton, .popup-buttons .untoggledButton, .popup-buttons .toggledButton {
+  .popup-buttons .button, .popup-buttons .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .popup-buttons .toggleButton, .popup-buttons .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .popup-buttons .untoggledButton, .popup-buttons .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .popup-buttons .toggledButton {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -moz-box-flex: 1;
@@ -5616,7 +5641,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     border-radius: 2px;
     line-height: 20px;
     margin-right: 5px; }
-    .popup-buttons .button:last-child, .popup-buttons .toggleButton:last-child, .popup-buttons .untoggledButton:last-child, .popup-buttons .toggledButton:last-child {
+    .popup-buttons .button:last-child, .popup-buttons .toggleBar .toggle-container .toggleButton:last-child, .toggleBar .toggle-container .popup-buttons .toggleButton:last-child, .popup-buttons .toggleBar .toggle-container .untoggledButton:last-child, .toggleBar .toggle-container .popup-buttons .untoggledButton:last-child, .popup-buttons .toggleBar .toggle-container .toggledButton:last-child, .toggleBar .toggle-container .popup-buttons .toggledButton:last-child {
       margin-right: 0px; }
 
 .popup-open {
@@ -6198,10 +6223,13 @@ a.item-content {
 .item-button-left {
   padding-left: 72px; }
 
-.item-button-left > .button, .item-button-left > .toggleButton, .item-button-left > .untoggledButton, .item-button-left > .toggledButton,
+.item-button-left > .button, .toggleBar .toggle-container .item-button-left > .toggleButton, .toggleBar .toggle-container .item-button-left > .untoggledButton, .toggleBar .toggle-container .item-button-left > .toggledButton,
 .item-button-left .item-content > .button,
+.item-button-left .toggleBar .toggle-container .item-content > .toggleButton, .toggleBar .toggle-container
 .item-button-left .item-content > .toggleButton,
+.item-button-left .toggleBar .toggle-container .item-content > .untoggledButton, .toggleBar .toggle-container
 .item-button-left .item-content > .untoggledButton,
+.item-button-left .toggleBar .toggle-container .item-content > .toggledButton, .toggleBar .toggle-container
 .item-button-left .item-content > .toggledButton {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6221,31 +6249,49 @@ a.item-content {
   min-height: 34px;
   font-size: 18px;
   line-height: 32px; }
-  .item-button-left > .button .icon:before, .item-button-left > .toggleButton .icon:before, .item-button-left > .untoggledButton .icon:before, .item-button-left > .toggledButton .icon:before,
+  .item-button-left > .button .icon:before, .toggleBar .toggle-container .item-button-left > .toggleButton .icon:before, .toggleBar .toggle-container .item-button-left > .untoggledButton .icon:before, .toggleBar .toggle-container .item-button-left > .toggledButton .icon:before,
   .item-button-left .item-content > .button .icon:before,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggleButton .icon:before, .toggleBar .toggle-container
   .item-button-left .item-content > .toggleButton .icon:before,
+  .item-button-left .toggleBar .toggle-container .item-content > .untoggledButton .icon:before, .toggleBar .toggle-container
   .item-button-left .item-content > .untoggledButton .icon:before,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggledButton .icon:before, .toggleBar .toggle-container
   .item-button-left .item-content > .toggledButton .icon:before {
     position: relative;
     left: auto;
     width: auto;
     line-height: 31px; }
-  .item-button-left > .button > .button, .item-button-left > .toggleButton > .button, .item-button-left > .untoggledButton > .button, .item-button-left > .toggledButton > .button, .item-button-left > .button > .toggleButton, .item-button-left > .toggleButton > .toggleButton, .item-button-left > .untoggledButton > .toggleButton, .item-button-left > .toggledButton > .toggleButton, .item-button-left > .button > .untoggledButton, .item-button-left > .toggleButton > .untoggledButton, .item-button-left > .untoggledButton > .untoggledButton, .item-button-left > .toggledButton > .untoggledButton, .item-button-left > .button > .toggledButton, .item-button-left > .toggleButton > .toggledButton, .item-button-left > .untoggledButton > .toggledButton, .item-button-left > .toggledButton > .toggledButton,
+  .item-button-left > .button > .button, .toggleBar .toggle-container .item-button-left > .toggleButton > .button, .toggleBar .toggle-container .item-button-left > .untoggledButton > .button, .toggleBar .toggle-container .item-button-left > .toggledButton > .button, .toggleBar .toggle-container .item-button-left > .button > .toggleButton, .toggleBar .toggle-container .item-button-left > .toggleButton > .toggleButton, .toggleBar .toggle-container .item-button-left > .untoggledButton > .toggleButton, .toggleBar .toggle-container .item-button-left > .toggledButton > .toggleButton, .toggleBar .toggle-container .item-button-left > .button > .untoggledButton, .toggleBar .toggle-container .item-button-left > .toggleButton > .untoggledButton, .toggleBar .toggle-container .item-button-left > .untoggledButton > .untoggledButton, .toggleBar .toggle-container .item-button-left > .toggledButton > .untoggledButton, .toggleBar .toggle-container .item-button-left > .button > .toggledButton, .toggleBar .toggle-container .item-button-left > .toggleButton > .toggledButton, .toggleBar .toggle-container .item-button-left > .untoggledButton > .toggledButton, .toggleBar .toggle-container .item-button-left > .toggledButton > .toggledButton,
   .item-button-left .item-content > .button > .button,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggleButton > .button, .toggleBar .toggle-container
   .item-button-left .item-content > .toggleButton > .button,
+  .item-button-left .toggleBar .toggle-container .item-content > .untoggledButton > .button, .toggleBar .toggle-container
   .item-button-left .item-content > .untoggledButton > .button,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggledButton > .button, .toggleBar .toggle-container
   .item-button-left .item-content > .toggledButton > .button,
+  .item-button-left .toggleBar .toggle-container .item-content > .button > .toggleButton, .toggleBar .toggle-container
   .item-button-left .item-content > .button > .toggleButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggleButton > .toggleButton, .toggleBar .toggle-container
   .item-button-left .item-content > .toggleButton > .toggleButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .untoggledButton > .toggleButton, .toggleBar .toggle-container
   .item-button-left .item-content > .untoggledButton > .toggleButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggledButton > .toggleButton, .toggleBar .toggle-container
   .item-button-left .item-content > .toggledButton > .toggleButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .button > .untoggledButton, .toggleBar .toggle-container
   .item-button-left .item-content > .button > .untoggledButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggleButton > .untoggledButton, .toggleBar .toggle-container
   .item-button-left .item-content > .toggleButton > .untoggledButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .untoggledButton > .untoggledButton, .toggleBar .toggle-container
   .item-button-left .item-content > .untoggledButton > .untoggledButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggledButton > .untoggledButton, .toggleBar .toggle-container
   .item-button-left .item-content > .toggledButton > .untoggledButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .button > .toggledButton, .toggleBar .toggle-container
   .item-button-left .item-content > .button > .toggledButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggleButton > .toggledButton, .toggleBar .toggle-container
   .item-button-left .item-content > .toggleButton > .toggledButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .untoggledButton > .toggledButton, .toggleBar .toggle-container
   .item-button-left .item-content > .untoggledButton > .toggledButton,
+  .item-button-left .toggleBar .toggle-container .item-content > .toggledButton > .toggledButton, .toggleBar .toggle-container
   .item-button-left .item-content > .toggledButton > .toggledButton {
     margin: 0px 2px;
     min-height: 34px;
@@ -6257,10 +6303,13 @@ a.item.item-button-right,
 button.item.item-button-right {
   padding-right: 80px; }
 
-.item-button-right > .button, .item-button-right > .toggleButton, .item-button-right > .untoggledButton, .item-button-right > .toggledButton,
+.item-button-right > .button, .toggleBar .toggle-container .item-button-right > .toggleButton, .toggleBar .toggle-container .item-button-right > .untoggledButton, .toggleBar .toggle-container .item-button-right > .toggledButton,
 .item-button-right .item-content > .button,
+.item-button-right .toggleBar .toggle-container .item-content > .toggleButton, .toggleBar .toggle-container
 .item-button-right .item-content > .toggleButton,
+.item-button-right .toggleBar .toggle-container .item-content > .untoggledButton, .toggleBar .toggle-container
 .item-button-right .item-content > .untoggledButton,
+.item-button-right .toggleBar .toggle-container .item-content > .toggledButton, .toggleBar .toggle-container
 .item-button-right .item-content > .toggledButton,
 .item-button-right > .buttons,
 .item-button-right .item-content > .buttons {
@@ -6282,10 +6331,13 @@ button.item.item-button-right {
   min-height: 34px;
   font-size: 18px;
   line-height: 32px; }
-  .item-button-right > .button .icon:before, .item-button-right > .toggleButton .icon:before, .item-button-right > .untoggledButton .icon:before, .item-button-right > .toggledButton .icon:before,
+  .item-button-right > .button .icon:before, .toggleBar .toggle-container .item-button-right > .toggleButton .icon:before, .toggleBar .toggle-container .item-button-right > .untoggledButton .icon:before, .toggleBar .toggle-container .item-button-right > .toggledButton .icon:before,
   .item-button-right .item-content > .button .icon:before,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggleButton .icon:before, .toggleBar .toggle-container
   .item-button-right .item-content > .toggleButton .icon:before,
+  .item-button-right .toggleBar .toggle-container .item-content > .untoggledButton .icon:before, .toggleBar .toggle-container
   .item-button-right .item-content > .untoggledButton .icon:before,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggledButton .icon:before, .toggleBar .toggle-container
   .item-button-right .item-content > .toggledButton .icon:before,
   .item-button-right > .buttons .icon:before,
   .item-button-right .item-content > .buttons .icon:before {
@@ -6293,30 +6345,48 @@ button.item.item-button-right {
     left: auto;
     width: auto;
     line-height: 31px; }
-  .item-button-right > .button > .button, .item-button-right > .toggleButton > .button, .item-button-right > .untoggledButton > .button, .item-button-right > .toggledButton > .button, .item-button-right > .button > .toggleButton, .item-button-right > .toggleButton > .toggleButton, .item-button-right > .untoggledButton > .toggleButton, .item-button-right > .toggledButton > .toggleButton, .item-button-right > .button > .untoggledButton, .item-button-right > .toggleButton > .untoggledButton, .item-button-right > .untoggledButton > .untoggledButton, .item-button-right > .toggledButton > .untoggledButton, .item-button-right > .button > .toggledButton, .item-button-right > .toggleButton > .toggledButton, .item-button-right > .untoggledButton > .toggledButton, .item-button-right > .toggledButton > .toggledButton,
+  .item-button-right > .button > .button, .toggleBar .toggle-container .item-button-right > .toggleButton > .button, .toggleBar .toggle-container .item-button-right > .untoggledButton > .button, .toggleBar .toggle-container .item-button-right > .toggledButton > .button, .toggleBar .toggle-container .item-button-right > .button > .toggleButton, .toggleBar .toggle-container .item-button-right > .toggleButton > .toggleButton, .toggleBar .toggle-container .item-button-right > .untoggledButton > .toggleButton, .toggleBar .toggle-container .item-button-right > .toggledButton > .toggleButton, .toggleBar .toggle-container .item-button-right > .button > .untoggledButton, .toggleBar .toggle-container .item-button-right > .toggleButton > .untoggledButton, .toggleBar .toggle-container .item-button-right > .untoggledButton > .untoggledButton, .toggleBar .toggle-container .item-button-right > .toggledButton > .untoggledButton, .toggleBar .toggle-container .item-button-right > .button > .toggledButton, .toggleBar .toggle-container .item-button-right > .toggleButton > .toggledButton, .toggleBar .toggle-container .item-button-right > .untoggledButton > .toggledButton, .toggleBar .toggle-container .item-button-right > .toggledButton > .toggledButton,
   .item-button-right .item-content > .button > .button,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggleButton > .button, .toggleBar .toggle-container
   .item-button-right .item-content > .toggleButton > .button,
+  .item-button-right .toggleBar .toggle-container .item-content > .untoggledButton > .button, .toggleBar .toggle-container
   .item-button-right .item-content > .untoggledButton > .button,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggledButton > .button, .toggleBar .toggle-container
   .item-button-right .item-content > .toggledButton > .button,
+  .item-button-right .toggleBar .toggle-container .item-content > .button > .toggleButton, .toggleBar .toggle-container
   .item-button-right .item-content > .button > .toggleButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggleButton > .toggleButton, .toggleBar .toggle-container
   .item-button-right .item-content > .toggleButton > .toggleButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .untoggledButton > .toggleButton, .toggleBar .toggle-container
   .item-button-right .item-content > .untoggledButton > .toggleButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggledButton > .toggleButton, .toggleBar .toggle-container
   .item-button-right .item-content > .toggledButton > .toggleButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .button > .untoggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .button > .untoggledButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggleButton > .untoggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .toggleButton > .untoggledButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .untoggledButton > .untoggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .untoggledButton > .untoggledButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggledButton > .untoggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .toggledButton > .untoggledButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .button > .toggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .button > .toggledButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggleButton > .toggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .toggleButton > .toggledButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .untoggledButton > .toggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .untoggledButton > .toggledButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .toggledButton > .toggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .toggledButton > .toggledButton,
-  .item-button-right > .buttons > .button,
-  .item-button-right > .buttons > .toggleButton,
-  .item-button-right > .buttons > .untoggledButton,
+  .item-button-right > .buttons > .button, .toggleBar .toggle-container
+  .item-button-right > .buttons > .toggleButton, .toggleBar .toggle-container
+  .item-button-right > .buttons > .untoggledButton, .toggleBar .toggle-container
   .item-button-right > .buttons > .toggledButton,
   .item-button-right .item-content > .buttons > .button,
+  .item-button-right .toggleBar .toggle-container .item-content > .buttons > .toggleButton, .toggleBar .toggle-container
   .item-button-right .item-content > .buttons > .toggleButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .buttons > .untoggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .buttons > .untoggledButton,
+  .item-button-right .toggleBar .toggle-container .item-content > .buttons > .toggledButton, .toggleBar .toggle-container
   .item-button-right .item-content > .buttons > .toggledButton {
     margin: 0px 2px;
     min-width: 34px;
@@ -6511,9 +6581,9 @@ button.item.item-button-right {
   opacity: 0;
   -webkit-transform: translate3d(-21px, 0, 0);
   transform: translate3d(-21px, 0, 0); }
-  .item-left-edit .button, .item-left-edit .toggleButton, .item-left-edit .untoggledButton, .item-left-edit .toggledButton {
+  .item-left-edit .button, .item-left-edit .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .item-left-edit .toggleButton, .item-left-edit .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .item-left-edit .untoggledButton, .item-left-edit .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .item-left-edit .toggledButton {
     height: 100%; }
-    .item-left-edit .button.icon, .item-left-edit .icon.toggleButton, .item-left-edit .icon.untoggledButton, .item-left-edit .icon.toggledButton {
+    .item-left-edit .button.icon, .item-left-edit .toggleBar .toggle-container .icon.toggleButton, .toggleBar .toggle-container .item-left-edit .icon.toggleButton, .item-left-edit .toggleBar .toggle-container .icon.untoggledButton, .toggleBar .toggle-container .item-left-edit .icon.untoggledButton, .item-left-edit .toggleBar .toggle-container .icon.toggledButton, .toggleBar .toggle-container .item-left-edit .icon.toggledButton {
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-box;
@@ -6539,10 +6609,10 @@ button.item.item-button-right {
   -webkit-transition-delay: 125ms;
   transition-delay: 125ms; }
 
-.item-delete .button.icon, .item-delete .icon.toggleButton, .item-delete .icon.untoggledButton, .item-delete .icon.toggledButton {
+.item-delete .button.icon, .item-delete .toggleBar .toggle-container .icon.toggleButton, .toggleBar .toggle-container .item-delete .icon.toggleButton, .item-delete .toggleBar .toggle-container .icon.untoggledButton, .toggleBar .toggle-container .item-delete .icon.untoggledButton, .item-delete .toggleBar .toggle-container .icon.toggledButton, .toggleBar .toggle-container .item-delete .icon.toggledButton {
   color: #ef473a;
   font-size: 24px; }
-  .item-delete .button.icon:hover, .item-delete .icon.toggleButton:hover, .item-delete .icon.untoggledButton:hover, .item-delete .icon.toggledButton:hover {
+  .item-delete .button.icon:hover, .item-delete .toggleBar .toggle-container .icon.toggleButton:hover, .toggleBar .toggle-container .item-delete .icon.toggleButton:hover, .item-delete .toggleBar .toggle-container .icon.untoggledButton:hover, .toggleBar .toggle-container .item-delete .icon.untoggledButton:hover, .item-delete .toggleBar .toggle-container .icon.toggledButton:hover, .toggleBar .toggle-container .item-delete .icon.toggledButton:hover {
     opacity: .7; }
 
 .item-right-edit {
@@ -6560,10 +6630,10 @@ button.item.item-button-right {
   opacity: 0;
   -webkit-transform: translate3d(75px, 0, 0);
   transform: translate3d(75px, 0, 0); }
-  .item-right-edit .button, .item-right-edit .toggleButton, .item-right-edit .untoggledButton, .item-right-edit .toggledButton {
+  .item-right-edit .button, .item-right-edit .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .item-right-edit .toggleButton, .item-right-edit .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .item-right-edit .untoggledButton, .item-right-edit .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .item-right-edit .toggledButton {
     min-width: 50px;
     height: 100%; }
-    .item-right-edit .button.icon, .item-right-edit .icon.toggleButton, .item-right-edit .icon.untoggledButton, .item-right-edit .icon.toggledButton {
+    .item-right-edit .button.icon, .item-right-edit .toggleBar .toggle-container .icon.toggleButton, .toggleBar .toggle-container .item-right-edit .icon.toggleButton, .item-right-edit .toggleBar .toggle-container .icon.untoggledButton, .toggleBar .toggle-container .item-right-edit .icon.untoggledButton, .item-right-edit .toggleBar .toggle-container .icon.toggledButton, .toggleBar .toggle-container .item-right-edit .icon.toggledButton {
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-box;
@@ -6586,7 +6656,7 @@ button.item.item-button-right {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
 
-.item-reorder .button.icon, .item-reorder .icon.toggleButton, .item-reorder .icon.untoggledButton, .item-reorder .icon.toggledButton {
+.item-reorder .button.icon, .item-reorder .toggleBar .toggle-container .icon.toggleButton, .toggleBar .toggle-container .item-reorder .icon.toggleButton, .item-reorder .toggleBar .toggle-container .icon.untoggledButton, .toggleBar .toggle-container .item-reorder .icon.untoggledButton, .item-reorder .toggleBar .toggle-container .icon.toggledButton, .toggleBar .toggle-container .item-reorder .icon.toggledButton {
   color: #444;
   font-size: 32px; }
 
@@ -6613,7 +6683,7 @@ button.item.item-button-right {
   right: 0;
   z-index: 1;
   height: 100%; }
-  .item-options .button, .item-options .toggleButton, .item-options .untoggledButton, .item-options .toggledButton {
+  .item-options .button, .item-options .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .item-options .toggleButton, .item-options .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .item-options .untoggledButton, .item-options .toggleBar .toggle-container .toggledButton, .toggleBar .toggle-container .item-options .toggledButton {
     height: 100%;
     border: none;
     border-radius: 0;
@@ -6627,7 +6697,7 @@ button.item.item-button-right {
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center; }
-    .item-options .button:before, .item-options .toggleButton:before, .item-options .untoggledButton:before, .item-options .toggledButton:before {
+    .item-options .button:before, .item-options .toggleBar .toggle-container .toggleButton:before, .toggleBar .toggle-container .item-options .toggleButton:before, .item-options .toggleBar .toggle-container .untoggledButton:before, .toggleBar .toggle-container .item-options .untoggledButton:before, .item-options .toggleBar .toggle-container .toggledButton:before, .toggleBar .toggle-container .item-options .toggledButton:before {
       margin: 0 auto; }
 
 /**
@@ -6685,29 +6755,29 @@ button.item.item-button-right {
   .card .item:last-child {
     border-bottom: 0; }
 
-.padding .card, .padding .list-inset {
+.padding .card, .toggleBar .card, .padding .list-inset, .toggleBar .list-inset {
   margin-left: 0;
   margin-right: 0; }
 
 .card .item:first-child,
 .list-inset .item:first-child,
-.padding > .list .item:first-child {
+.padding > .list .item:first-child, .toggleBar > .list .item:first-child {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px; }
   .card .item:first-child .item-content,
   .list-inset .item:first-child .item-content,
-  .padding > .list .item:first-child .item-content {
+  .padding > .list .item:first-child .item-content, .toggleBar > .list .item:first-child .item-content {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px; }
 
 .card .item:last-child,
 .list-inset .item:last-child,
-.padding > .list .item:last-child {
+.padding > .list .item:last-child, .toggleBar > .list .item:last-child {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px; }
   .card .item:last-child .item-content,
   .list-inset .item:last-child .item-content,
-  .padding > .list .item:last-child .item-content {
+  .padding > .list .item:last-child .item-content, .toggleBar > .list .item:last-child .item-content {
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px; }
 
@@ -6717,13 +6787,13 @@ button.item.item-button-right {
 
 .card .item,
 .list-inset .item,
-.padding > .list .item,
+.padding > .list .item, .toggleBar > .list .item,
 .padding-horizontal > .list .item {
   margin-right: 0;
   margin-left: 0; }
   .card .item.item-input input,
   .list-inset .item.item-input input,
-  .padding > .list .item.item-input input,
+  .padding > .list .item.item-input input, .toggleBar > .list .item.item-input input,
   .padding-horizontal > .list .item.item-input input {
     padding-right: 44px; }
 
@@ -6799,7 +6869,7 @@ button.item.item-button-right {
   background-color: #444;
   color: #fff; }
 
-.button .badge, .toggleButton .badge, .untoggledButton .badge, .toggledButton .badge {
+.button .badge, .toggleBar .toggle-container .toggleButton .badge, .toggleBar .toggle-container .untoggledButton .badge, .toggleBar .toggle-container .toggledButton .badge {
   position: relative;
   top: -1px; }
 
@@ -7436,7 +7506,7 @@ ion-slides {
     right: 0;
     left: 0; }
 
-.overflow-scroll.padding > .scroll.overscroll {
+.overflow-scroll.padding > .scroll.overscroll, .overflow-scroll.toggleBar > .scroll.overscroll {
   padding: 10px; }
 
 @-webkit-keyframes refresh-spin {
@@ -7607,7 +7677,7 @@ textarea {
     margin: 0;
     padding-right: 24px;
     background-color: transparent; }
-  .item-input .button .icon, .item-input .toggleButton .icon, .item-input .untoggledButton .icon, .item-input .toggledButton .icon {
+  .item-input .button .icon, .item-input .toggleBar .toggle-container .toggleButton .icon, .toggleBar .toggle-container .item-input .toggleButton .icon, .item-input .toggleBar .toggle-container .untoggledButton .icon, .toggleBar .toggle-container .item-input .untoggledButton .icon, .item-input .toggleBar .toggle-container .toggledButton .icon, .toggleBar .toggle-container .item-input .toggledButton .icon {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 24px;
     -moz-box-flex: 0;
@@ -7619,7 +7689,7 @@ textarea {
     height: auto;
     text-align: center;
     font-size: 16px; }
-  .item-input .button-bar {
+  .item-input .button-bar, .item-input .toggleBar .toggle-container, .toggleBar .item-input .toggle-container {
     -webkit-border-radius: 0;
     border-radius: 0;
     -webkit-box-flex: 1;
@@ -7683,7 +7753,7 @@ textarea {
   background: transparent;
   line-height: 18px; }
 
-.item-input-wrapper ~ .button, .item-input-wrapper ~ .toggleButton, .item-input-wrapper ~ .untoggledButton, .item-input-wrapper ~ .toggledButton {
+.item-input-wrapper ~ .button, .toggleBar .toggle-container .item-input-wrapper ~ .toggleButton, .toggleBar .toggle-container .item-input-wrapper ~ .untoggledButton, .toggleBar .toggle-container .item-input-wrapper ~ .toggledButton {
   margin-left: 10.66667px; }
 
 .input-label {
@@ -8598,7 +8668,7 @@ progress {
  * Buttons
  * --------------------------------------------------
  */
-.button, .toggleButton, .untoggledButton, .toggledButton {
+.button, .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .toggledButton {
   border-color: transparent;
   background-color: #f8f8f8;
   color: #444;
@@ -8617,261 +8687,261 @@ progress {
   font-size: 16px;
   line-height: 42px;
   cursor: pointer; }
-  .button:hover, .toggleButton:hover, .untoggledButton:hover, .toggledButton:hover {
+  .button:hover, .toggleBar .toggle-container .toggleButton:hover, .toggleBar .toggle-container .untoggledButton:hover, .toggleBar .toggle-container .toggledButton:hover {
     color: #444;
     text-decoration: none; }
-  .button.active, .active.toggleButton, .active.untoggledButton, .active.toggledButton, .button.activated, .activated.toggleButton, .activated.untoggledButton, .activated.toggledButton {
+  .button.active, .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .active.toggledButton, .button.activated, .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .activated.toggledButton {
     background-color: #e5e5e5; }
-  .button:after, .toggleButton:after, .untoggledButton:after, .toggledButton:after {
+  .button:after, .toggleBar .toggle-container .toggleButton:after, .toggleBar .toggle-container .untoggledButton:after, .toggleBar .toggle-container .toggledButton:after {
     position: absolute;
     top: -6px;
     right: -6px;
     bottom: -6px;
     left: -6px;
     content: ' '; }
-  .button .icon, .toggleButton .icon, .untoggledButton .icon, .toggledButton .icon {
+  .button .icon, .toggleBar .toggle-container .toggleButton .icon, .toggleBar .toggle-container .untoggledButton .icon, .toggleBar .toggle-container .toggledButton .icon {
     vertical-align: top;
     pointer-events: none; }
-  .button .icon:before, .toggleButton .icon:before, .untoggledButton .icon:before, .toggledButton .icon:before, .button.icon:before, .icon.toggleButton:before, .icon.untoggledButton:before, .icon.toggledButton:before, .button.icon-left:before, .icon-left.toggleButton:before, .icon-left.untoggledButton:before, .icon-left.toggledButton:before, .button.icon-right:before, .icon-right.toggleButton:before, .icon-right.untoggledButton:before, .icon-right.toggledButton:before {
+  .button .icon:before, .toggleBar .toggle-container .toggleButton .icon:before, .toggleBar .toggle-container .untoggledButton .icon:before, .toggleBar .toggle-container .toggledButton .icon:before, .button.icon:before, .toggleBar .toggle-container .icon.toggleButton:before, .toggleBar .toggle-container .icon.untoggledButton:before, .toggleBar .toggle-container .icon.toggledButton:before, .button.icon-left:before, .toggleBar .toggle-container .icon-left.toggleButton:before, .toggleBar .toggle-container .icon-left.untoggledButton:before, .toggleBar .toggle-container .icon-left.toggledButton:before, .button.icon-right:before, .toggleBar .toggle-container .icon-right.toggleButton:before, .toggleBar .toggle-container .icon-right.untoggledButton:before, .toggleBar .toggle-container .icon-right.toggledButton:before {
     display: inline-block;
     padding: 0 0 1px 0;
     vertical-align: inherit;
     font-size: 24px;
     line-height: 41px;
     pointer-events: none; }
-  .button.icon-left:before, .icon-left.toggleButton:before, .icon-left.untoggledButton:before, .icon-left.toggledButton:before {
+  .button.icon-left:before, .toggleBar .toggle-container .icon-left.toggleButton:before, .toggleBar .toggle-container .icon-left.untoggledButton:before, .toggleBar .toggle-container .icon-left.toggledButton:before {
     float: left;
     padding-right: .2em;
     padding-left: 0; }
-  .button.icon-right:before, .icon-right.toggleButton:before, .icon-right.untoggledButton:before, .icon-right.toggledButton:before {
+  .button.icon-right:before, .toggleBar .toggle-container .icon-right.toggleButton:before, .toggleBar .toggle-container .icon-right.untoggledButton:before, .toggleBar .toggle-container .icon-right.toggledButton:before {
     float: right;
     padding-right: 0;
     padding-left: .2em; }
-  .button.button-block, .button-block.toggleButton, .button-block.untoggledButton, .button-block.toggledButton, .button.button-full, .button-full.toggleButton, .button-full.untoggledButton, .button-full.toggledButton {
+  .button.button-block, .toggleBar .toggle-container .button-block.toggleButton, .toggleBar .toggle-container .button-block.untoggledButton, .toggleBar .toggle-container .button-block.toggledButton, .button.button-full, .toggleBar .toggle-container .button-full.toggleButton, .toggleBar .toggle-container .button-full.untoggledButton, .toggleBar .toggle-container .button-full.toggledButton {
     margin-top: 10px;
     margin-bottom: 10px; }
-  .button.button-light, .button-light.toggleButton, .button-light.untoggledButton, .button-light.toggledButton {
+  .button.button-light, .toggleBar .toggle-container .button-light.toggleButton, .toggleBar .toggle-container .button-light.untoggledButton, .toggleBar .toggle-container .button-light.toggledButton {
     border-color: transparent;
     background-color: #fff;
     color: #444; }
-    .button.button-light:hover, .button-light.toggleButton:hover, .button-light.untoggledButton:hover, .button-light.toggledButton:hover {
+    .button.button-light:hover, .toggleBar .toggle-container .button-light.toggleButton:hover, .toggleBar .toggle-container .button-light.untoggledButton:hover, .toggleBar .toggle-container .button-light.toggledButton:hover {
       color: #444;
       text-decoration: none; }
-    .button.button-light.active, .button-light.active.toggleButton, .button-light.active.untoggledButton, .button-light.active.toggledButton, .button.button-light.activated, .button-light.activated.toggleButton, .button-light.activated.untoggledButton, .button-light.activated.toggledButton {
+    .button.button-light.active, .toggleBar .toggle-container .button-light.active.toggleButton, .toggleBar .toggle-container .button-light.active.untoggledButton, .toggleBar .toggle-container .button-light.active.toggledButton, .button.button-light.activated, .toggleBar .toggle-container .button-light.activated.toggleButton, .toggleBar .toggle-container .button-light.activated.untoggledButton, .toggleBar .toggle-container .button-light.activated.toggledButton {
       background-color: #fafafa; }
-    .button.button-light.button-clear, .button-light.button-clear.toggleButton, .button-light.button-clear.untoggledButton, .button-light.button-clear.toggledButton {
+    .button.button-light.button-clear, .toggleBar .toggle-container .button-light.button-clear.toggleButton, .toggleBar .toggle-container .button-light.button-clear.untoggledButton, .toggleBar .toggle-container .button-light.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #ddd; }
-    .button.button-light.button-icon, .button-light.button-icon.toggleButton, .button-light.button-icon.untoggledButton, .button-light.button-icon.toggledButton {
+    .button.button-light.button-icon, .toggleBar .toggle-container .button-light.button-icon.toggleButton, .toggleBar .toggle-container .button-light.button-icon.untoggledButton, .toggleBar .toggle-container .button-light.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-light.button-outline, .button-light.toggleButton, .button-light.untoggledButton, .button-light.toggledButton {
+    .button.button-light.button-outline, .toggleBar .toggle-container .button-light.toggleButton, .toggleBar .toggle-container .button-light.untoggledButton, .toggleBar .toggle-container .button-light.toggledButton {
       border-color: #ddd;
       background: transparent;
       color: #ddd; }
-      .button.button-light.button-outline.active, .button-light.active.toggleButton, .button-light.active.untoggledButton, .button-light.active.toggledButton, .button.button-light.button-outline.activated, .button-light.activated.toggleButton, .button-light.activated.untoggledButton, .button-light.activated.toggledButton {
+      .button.button-light.button-outline.active, .toggleBar .toggle-container .button-light.active.toggleButton, .toggleBar .toggle-container .button-light.active.untoggledButton, .toggleBar .toggle-container .button-light.active.toggledButton, .button.button-light.button-outline.activated, .toggleBar .toggle-container .button-light.activated.toggleButton, .toggleBar .toggle-container .button-light.activated.untoggledButton, .toggleBar .toggle-container .button-light.activated.toggledButton {
         background-color: #ddd;
         box-shadow: none;
         color: #fff; }
-  .button.button-stable, .button-stable.toggleButton, .button-stable.untoggledButton, .button-stable.toggledButton {
+  .button.button-stable, .toggleBar .toggle-container .button-stable.toggleButton, .toggleBar .toggle-container .button-stable.untoggledButton, .toggleBar .toggle-container .button-stable.toggledButton {
     border-color: transparent;
     background-color: #f8f8f8;
     color: #444; }
-    .button.button-stable:hover, .button-stable.toggleButton:hover, .button-stable.untoggledButton:hover, .button-stable.toggledButton:hover {
+    .button.button-stable:hover, .toggleBar .toggle-container .button-stable.toggleButton:hover, .toggleBar .toggle-container .button-stable.untoggledButton:hover, .toggleBar .toggle-container .button-stable.toggledButton:hover {
       color: #444;
       text-decoration: none; }
-    .button.button-stable.active, .button-stable.active.toggleButton, .button-stable.active.untoggledButton, .button-stable.active.toggledButton, .button.button-stable.activated, .button-stable.activated.toggleButton, .button-stable.activated.untoggledButton, .button-stable.activated.toggledButton {
+    .button.button-stable.active, .toggleBar .toggle-container .button-stable.active.toggleButton, .toggleBar .toggle-container .button-stable.active.untoggledButton, .toggleBar .toggle-container .button-stable.active.toggledButton, .button.button-stable.activated, .toggleBar .toggle-container .button-stable.activated.toggleButton, .toggleBar .toggle-container .button-stable.activated.untoggledButton, .toggleBar .toggle-container .button-stable.activated.toggledButton {
       background-color: #e5e5e5; }
-    .button.button-stable.button-clear, .button-stable.button-clear.toggleButton, .button-stable.button-clear.untoggledButton, .button-stable.button-clear.toggledButton {
+    .button.button-stable.button-clear, .toggleBar .toggle-container .button-stable.button-clear.toggleButton, .toggleBar .toggle-container .button-stable.button-clear.untoggledButton, .toggleBar .toggle-container .button-stable.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #b2b2b2; }
-    .button.button-stable.button-icon, .button-stable.button-icon.toggleButton, .button-stable.button-icon.untoggledButton, .button-stable.button-icon.toggledButton {
+    .button.button-stable.button-icon, .toggleBar .toggle-container .button-stable.button-icon.toggleButton, .toggleBar .toggle-container .button-stable.button-icon.untoggledButton, .toggleBar .toggle-container .button-stable.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-stable.button-outline, .button-stable.toggleButton, .button-stable.untoggledButton, .button-stable.toggledButton {
+    .button.button-stable.button-outline, .toggleBar .toggle-container .button-stable.toggleButton, .toggleBar .toggle-container .button-stable.untoggledButton, .toggleBar .toggle-container .button-stable.toggledButton {
       border-color: #b2b2b2;
       background: transparent;
       color: #b2b2b2; }
-      .button.button-stable.button-outline.active, .button-stable.active.toggleButton, .button-stable.active.untoggledButton, .button-stable.active.toggledButton, .button.button-stable.button-outline.activated, .button-stable.activated.toggleButton, .button-stable.activated.untoggledButton, .button-stable.activated.toggledButton {
+      .button.button-stable.button-outline.active, .toggleBar .toggle-container .button-stable.active.toggleButton, .toggleBar .toggle-container .button-stable.active.untoggledButton, .toggleBar .toggle-container .button-stable.active.toggledButton, .button.button-stable.button-outline.activated, .toggleBar .toggle-container .button-stable.activated.toggleButton, .toggleBar .toggle-container .button-stable.activated.untoggledButton, .toggleBar .toggle-container .button-stable.activated.toggledButton {
         background-color: #b2b2b2;
         box-shadow: none;
         color: #fff; }
-  .button.button-positive, .button-positive.toggleButton, .button-positive.untoggledButton, .button-positive.toggledButton {
+  .button.button-positive, .toggleBar .toggle-container .button-positive.toggleButton, .toggleBar .toggle-container .button-positive.untoggledButton, .toggleBar .toggle-container .button-positive.toggledButton {
     border-color: transparent;
     background-color: #387ef5;
     color: #fff; }
-    .button.button-positive:hover, .button-positive.toggleButton:hover, .button-positive.untoggledButton:hover, .button-positive.toggledButton:hover {
+    .button.button-positive:hover, .toggleBar .toggle-container .button-positive.toggleButton:hover, .toggleBar .toggle-container .button-positive.untoggledButton:hover, .toggleBar .toggle-container .button-positive.toggledButton:hover {
       color: #fff;
       text-decoration: none; }
-    .button.button-positive.active, .button-positive.active.toggleButton, .button-positive.active.untoggledButton, .button-positive.active.toggledButton, .button.button-positive.activated, .button-positive.activated.toggleButton, .button-positive.activated.untoggledButton, .button-positive.activated.toggledButton {
+    .button.button-positive.active, .toggleBar .toggle-container .button-positive.active.toggleButton, .toggleBar .toggle-container .button-positive.active.untoggledButton, .toggleBar .toggle-container .button-positive.active.toggledButton, .button.button-positive.activated, .toggleBar .toggle-container .button-positive.activated.toggleButton, .toggleBar .toggle-container .button-positive.activated.untoggledButton, .toggleBar .toggle-container .button-positive.activated.toggledButton {
       background-color: #0c60ee; }
-    .button.button-positive.button-clear, .button-positive.button-clear.toggleButton, .button-positive.button-clear.untoggledButton, .button-positive.button-clear.toggledButton {
+    .button.button-positive.button-clear, .toggleBar .toggle-container .button-positive.button-clear.toggleButton, .toggleBar .toggle-container .button-positive.button-clear.untoggledButton, .toggleBar .toggle-container .button-positive.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #387ef5; }
-    .button.button-positive.button-icon, .button-positive.button-icon.toggleButton, .button-positive.button-icon.untoggledButton, .button-positive.button-icon.toggledButton {
+    .button.button-positive.button-icon, .toggleBar .toggle-container .button-positive.button-icon.toggleButton, .toggleBar .toggle-container .button-positive.button-icon.untoggledButton, .toggleBar .toggle-container .button-positive.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-positive.button-outline, .button-positive.toggleButton, .button-positive.untoggledButton, .button-positive.toggledButton {
+    .button.button-positive.button-outline, .toggleBar .toggle-container .button-positive.toggleButton, .toggleBar .toggle-container .button-positive.untoggledButton, .toggleBar .toggle-container .button-positive.toggledButton {
       border-color: #387ef5;
       background: transparent;
       color: #387ef5; }
-      .button.button-positive.button-outline.active, .button-positive.active.toggleButton, .button-positive.active.untoggledButton, .button-positive.active.toggledButton, .button.button-positive.button-outline.activated, .button-positive.activated.toggleButton, .button-positive.activated.untoggledButton, .button-positive.activated.toggledButton {
+      .button.button-positive.button-outline.active, .toggleBar .toggle-container .button-positive.active.toggleButton, .toggleBar .toggle-container .button-positive.active.untoggledButton, .toggleBar .toggle-container .button-positive.active.toggledButton, .button.button-positive.button-outline.activated, .toggleBar .toggle-container .button-positive.activated.toggleButton, .toggleBar .toggle-container .button-positive.activated.untoggledButton, .toggleBar .toggle-container .button-positive.activated.toggledButton {
         background-color: #387ef5;
         box-shadow: none;
         color: #fff; }
-  .button.button-calm, .button-calm.toggleButton, .button-calm.untoggledButton, .button-calm.toggledButton {
+  .button.button-calm, .toggleBar .toggle-container .button-calm.toggleButton, .toggleBar .toggle-container .button-calm.untoggledButton, .toggleBar .toggle-container .button-calm.toggledButton {
     border-color: transparent;
     background-color: #11c1f3;
     color: #fff; }
-    .button.button-calm:hover, .button-calm.toggleButton:hover, .button-calm.untoggledButton:hover, .button-calm.toggledButton:hover {
+    .button.button-calm:hover, .toggleBar .toggle-container .button-calm.toggleButton:hover, .toggleBar .toggle-container .button-calm.untoggledButton:hover, .toggleBar .toggle-container .button-calm.toggledButton:hover {
       color: #fff;
       text-decoration: none; }
-    .button.button-calm.active, .button-calm.active.toggleButton, .button-calm.active.untoggledButton, .button-calm.active.toggledButton, .button.button-calm.activated, .button-calm.activated.toggleButton, .button-calm.activated.untoggledButton, .button-calm.activated.toggledButton {
+    .button.button-calm.active, .toggleBar .toggle-container .button-calm.active.toggleButton, .toggleBar .toggle-container .button-calm.active.untoggledButton, .toggleBar .toggle-container .button-calm.active.toggledButton, .button.button-calm.activated, .toggleBar .toggle-container .button-calm.activated.toggleButton, .toggleBar .toggle-container .button-calm.activated.untoggledButton, .toggleBar .toggle-container .button-calm.activated.toggledButton {
       background-color: #0a9dc7; }
-    .button.button-calm.button-clear, .button-calm.button-clear.toggleButton, .button-calm.button-clear.untoggledButton, .button-calm.button-clear.toggledButton {
+    .button.button-calm.button-clear, .toggleBar .toggle-container .button-calm.button-clear.toggleButton, .toggleBar .toggle-container .button-calm.button-clear.untoggledButton, .toggleBar .toggle-container .button-calm.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #11c1f3; }
-    .button.button-calm.button-icon, .button-calm.button-icon.toggleButton, .button-calm.button-icon.untoggledButton, .button-calm.button-icon.toggledButton {
+    .button.button-calm.button-icon, .toggleBar .toggle-container .button-calm.button-icon.toggleButton, .toggleBar .toggle-container .button-calm.button-icon.untoggledButton, .toggleBar .toggle-container .button-calm.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-calm.button-outline, .button-calm.toggleButton, .button-calm.untoggledButton, .button-calm.toggledButton {
+    .button.button-calm.button-outline, .toggleBar .toggle-container .button-calm.toggleButton, .toggleBar .toggle-container .button-calm.untoggledButton, .toggleBar .toggle-container .button-calm.toggledButton {
       border-color: #11c1f3;
       background: transparent;
       color: #11c1f3; }
-      .button.button-calm.button-outline.active, .button-calm.active.toggleButton, .button-calm.active.untoggledButton, .button-calm.active.toggledButton, .button.button-calm.button-outline.activated, .button-calm.activated.toggleButton, .button-calm.activated.untoggledButton, .button-calm.activated.toggledButton {
+      .button.button-calm.button-outline.active, .toggleBar .toggle-container .button-calm.active.toggleButton, .toggleBar .toggle-container .button-calm.active.untoggledButton, .toggleBar .toggle-container .button-calm.active.toggledButton, .button.button-calm.button-outline.activated, .toggleBar .toggle-container .button-calm.activated.toggleButton, .toggleBar .toggle-container .button-calm.activated.untoggledButton, .toggleBar .toggle-container .button-calm.activated.toggledButton {
         background-color: #11c1f3;
         box-shadow: none;
         color: #fff; }
-  .button.button-assertive, .button-assertive.toggleButton, .button-assertive.untoggledButton, .button-assertive.toggledButton {
+  .button.button-assertive, .toggleBar .toggle-container .button-assertive.toggleButton, .toggleBar .toggle-container .button-assertive.untoggledButton, .toggleBar .toggle-container .button-assertive.toggledButton {
     border-color: transparent;
     background-color: #ef473a;
     color: #fff; }
-    .button.button-assertive:hover, .button-assertive.toggleButton:hover, .button-assertive.untoggledButton:hover, .button-assertive.toggledButton:hover {
+    .button.button-assertive:hover, .toggleBar .toggle-container .button-assertive.toggleButton:hover, .toggleBar .toggle-container .button-assertive.untoggledButton:hover, .toggleBar .toggle-container .button-assertive.toggledButton:hover {
       color: #fff;
       text-decoration: none; }
-    .button.button-assertive.active, .button-assertive.active.toggleButton, .button-assertive.active.untoggledButton, .button-assertive.active.toggledButton, .button.button-assertive.activated, .button-assertive.activated.toggleButton, .button-assertive.activated.untoggledButton, .button-assertive.activated.toggledButton {
+    .button.button-assertive.active, .toggleBar .toggle-container .button-assertive.active.toggleButton, .toggleBar .toggle-container .button-assertive.active.untoggledButton, .toggleBar .toggle-container .button-assertive.active.toggledButton, .button.button-assertive.activated, .toggleBar .toggle-container .button-assertive.activated.toggleButton, .toggleBar .toggle-container .button-assertive.activated.untoggledButton, .toggleBar .toggle-container .button-assertive.activated.toggledButton {
       background-color: #e42112; }
-    .button.button-assertive.button-clear, .button-assertive.button-clear.toggleButton, .button-assertive.button-clear.untoggledButton, .button-assertive.button-clear.toggledButton {
+    .button.button-assertive.button-clear, .toggleBar .toggle-container .button-assertive.button-clear.toggleButton, .toggleBar .toggle-container .button-assertive.button-clear.untoggledButton, .toggleBar .toggle-container .button-assertive.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #ef473a; }
-    .button.button-assertive.button-icon, .button-assertive.button-icon.toggleButton, .button-assertive.button-icon.untoggledButton, .button-assertive.button-icon.toggledButton {
+    .button.button-assertive.button-icon, .toggleBar .toggle-container .button-assertive.button-icon.toggleButton, .toggleBar .toggle-container .button-assertive.button-icon.untoggledButton, .toggleBar .toggle-container .button-assertive.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-assertive.button-outline, .button-assertive.toggleButton, .button-assertive.untoggledButton, .button-assertive.toggledButton {
+    .button.button-assertive.button-outline, .toggleBar .toggle-container .button-assertive.toggleButton, .toggleBar .toggle-container .button-assertive.untoggledButton, .toggleBar .toggle-container .button-assertive.toggledButton {
       border-color: #ef473a;
       background: transparent;
       color: #ef473a; }
-      .button.button-assertive.button-outline.active, .button-assertive.active.toggleButton, .button-assertive.active.untoggledButton, .button-assertive.active.toggledButton, .button.button-assertive.button-outline.activated, .button-assertive.activated.toggleButton, .button-assertive.activated.untoggledButton, .button-assertive.activated.toggledButton {
+      .button.button-assertive.button-outline.active, .toggleBar .toggle-container .button-assertive.active.toggleButton, .toggleBar .toggle-container .button-assertive.active.untoggledButton, .toggleBar .toggle-container .button-assertive.active.toggledButton, .button.button-assertive.button-outline.activated, .toggleBar .toggle-container .button-assertive.activated.toggleButton, .toggleBar .toggle-container .button-assertive.activated.untoggledButton, .toggleBar .toggle-container .button-assertive.activated.toggledButton {
         background-color: #ef473a;
         box-shadow: none;
         color: #fff; }
-  .button.button-balanced, .button-balanced.toggleButton, .button-balanced.untoggledButton, .button-balanced.toggledButton {
+  .button.button-balanced, .toggleBar .toggle-container .button-balanced.toggleButton, .toggleBar .toggle-container .button-balanced.untoggledButton, .toggleBar .toggle-container .button-balanced.toggledButton {
     border-color: transparent;
     background-color: #33cd5f;
     color: #fff; }
-    .button.button-balanced:hover, .button-balanced.toggleButton:hover, .button-balanced.untoggledButton:hover, .button-balanced.toggledButton:hover {
+    .button.button-balanced:hover, .toggleBar .toggle-container .button-balanced.toggleButton:hover, .toggleBar .toggle-container .button-balanced.untoggledButton:hover, .toggleBar .toggle-container .button-balanced.toggledButton:hover {
       color: #fff;
       text-decoration: none; }
-    .button.button-balanced.active, .button-balanced.active.toggleButton, .button-balanced.active.untoggledButton, .button-balanced.active.toggledButton, .button.button-balanced.activated, .button-balanced.activated.toggleButton, .button-balanced.activated.untoggledButton, .button-balanced.activated.toggledButton {
+    .button.button-balanced.active, .toggleBar .toggle-container .button-balanced.active.toggleButton, .toggleBar .toggle-container .button-balanced.active.untoggledButton, .toggleBar .toggle-container .button-balanced.active.toggledButton, .button.button-balanced.activated, .toggleBar .toggle-container .button-balanced.activated.toggleButton, .toggleBar .toggle-container .button-balanced.activated.untoggledButton, .toggleBar .toggle-container .button-balanced.activated.toggledButton {
       background-color: #28a54c; }
-    .button.button-balanced.button-clear, .button-balanced.button-clear.toggleButton, .button-balanced.button-clear.untoggledButton, .button-balanced.button-clear.toggledButton {
+    .button.button-balanced.button-clear, .toggleBar .toggle-container .button-balanced.button-clear.toggleButton, .toggleBar .toggle-container .button-balanced.button-clear.untoggledButton, .toggleBar .toggle-container .button-balanced.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #33cd5f; }
-    .button.button-balanced.button-icon, .button-balanced.button-icon.toggleButton, .button-balanced.button-icon.untoggledButton, .button-balanced.button-icon.toggledButton {
+    .button.button-balanced.button-icon, .toggleBar .toggle-container .button-balanced.button-icon.toggleButton, .toggleBar .toggle-container .button-balanced.button-icon.untoggledButton, .toggleBar .toggle-container .button-balanced.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-balanced.button-outline, .button-balanced.toggleButton, .button-balanced.untoggledButton, .button-balanced.toggledButton {
+    .button.button-balanced.button-outline, .toggleBar .toggle-container .button-balanced.toggleButton, .toggleBar .toggle-container .button-balanced.untoggledButton, .toggleBar .toggle-container .button-balanced.toggledButton {
       border-color: #33cd5f;
       background: transparent;
       color: #33cd5f; }
-      .button.button-balanced.button-outline.active, .button-balanced.active.toggleButton, .button-balanced.active.untoggledButton, .button-balanced.active.toggledButton, .button.button-balanced.button-outline.activated, .button-balanced.activated.toggleButton, .button-balanced.activated.untoggledButton, .button-balanced.activated.toggledButton {
+      .button.button-balanced.button-outline.active, .toggleBar .toggle-container .button-balanced.active.toggleButton, .toggleBar .toggle-container .button-balanced.active.untoggledButton, .toggleBar .toggle-container .button-balanced.active.toggledButton, .button.button-balanced.button-outline.activated, .toggleBar .toggle-container .button-balanced.activated.toggleButton, .toggleBar .toggle-container .button-balanced.activated.untoggledButton, .toggleBar .toggle-container .button-balanced.activated.toggledButton {
         background-color: #33cd5f;
         box-shadow: none;
         color: #fff; }
-  .button.button-energized, .button-energized.toggleButton, .button-energized.untoggledButton, .button-energized.toggledButton {
+  .button.button-energized, .toggleBar .toggle-container .button-energized.toggleButton, .toggleBar .toggle-container .button-energized.untoggledButton, .toggleBar .toggle-container .button-energized.toggledButton {
     border-color: transparent;
     background-color: #ffc900;
     color: #fff; }
-    .button.button-energized:hover, .button-energized.toggleButton:hover, .button-energized.untoggledButton:hover, .button-energized.toggledButton:hover {
+    .button.button-energized:hover, .toggleBar .toggle-container .button-energized.toggleButton:hover, .toggleBar .toggle-container .button-energized.untoggledButton:hover, .toggleBar .toggle-container .button-energized.toggledButton:hover {
       color: #fff;
       text-decoration: none; }
-    .button.button-energized.active, .button-energized.active.toggleButton, .button-energized.active.untoggledButton, .button-energized.active.toggledButton, .button.button-energized.activated, .button-energized.activated.toggleButton, .button-energized.activated.untoggledButton, .button-energized.activated.toggledButton {
+    .button.button-energized.active, .toggleBar .toggle-container .button-energized.active.toggleButton, .toggleBar .toggle-container .button-energized.active.untoggledButton, .toggleBar .toggle-container .button-energized.active.toggledButton, .button.button-energized.activated, .toggleBar .toggle-container .button-energized.activated.toggleButton, .toggleBar .toggle-container .button-energized.activated.untoggledButton, .toggleBar .toggle-container .button-energized.activated.toggledButton {
       background-color: #e6b500; }
-    .button.button-energized.button-clear, .button-energized.button-clear.toggleButton, .button-energized.button-clear.untoggledButton, .button-energized.button-clear.toggledButton {
+    .button.button-energized.button-clear, .toggleBar .toggle-container .button-energized.button-clear.toggleButton, .toggleBar .toggle-container .button-energized.button-clear.untoggledButton, .toggleBar .toggle-container .button-energized.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #ffc900; }
-    .button.button-energized.button-icon, .button-energized.button-icon.toggleButton, .button-energized.button-icon.untoggledButton, .button-energized.button-icon.toggledButton {
+    .button.button-energized.button-icon, .toggleBar .toggle-container .button-energized.button-icon.toggleButton, .toggleBar .toggle-container .button-energized.button-icon.untoggledButton, .toggleBar .toggle-container .button-energized.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-energized.button-outline, .button-energized.toggleButton, .button-energized.untoggledButton, .button-energized.toggledButton {
+    .button.button-energized.button-outline, .toggleBar .toggle-container .button-energized.toggleButton, .toggleBar .toggle-container .button-energized.untoggledButton, .toggleBar .toggle-container .button-energized.toggledButton {
       border-color: #ffc900;
       background: transparent;
       color: #ffc900; }
-      .button.button-energized.button-outline.active, .button-energized.active.toggleButton, .button-energized.active.untoggledButton, .button-energized.active.toggledButton, .button.button-energized.button-outline.activated, .button-energized.activated.toggleButton, .button-energized.activated.untoggledButton, .button-energized.activated.toggledButton {
+      .button.button-energized.button-outline.active, .toggleBar .toggle-container .button-energized.active.toggleButton, .toggleBar .toggle-container .button-energized.active.untoggledButton, .toggleBar .toggle-container .button-energized.active.toggledButton, .button.button-energized.button-outline.activated, .toggleBar .toggle-container .button-energized.activated.toggleButton, .toggleBar .toggle-container .button-energized.activated.untoggledButton, .toggleBar .toggle-container .button-energized.activated.toggledButton {
         background-color: #ffc900;
         box-shadow: none;
         color: #fff; }
-  .button.button-royal, .button-royal.toggleButton, .button-royal.untoggledButton, .button-royal.toggledButton {
+  .button.button-royal, .toggleBar .toggle-container .button-royal.toggleButton, .toggleBar .toggle-container .button-royal.untoggledButton, .toggleBar .toggle-container .button-royal.toggledButton {
     border-color: transparent;
     background-color: #886aea;
     color: #fff; }
-    .button.button-royal:hover, .button-royal.toggleButton:hover, .button-royal.untoggledButton:hover, .button-royal.toggledButton:hover {
+    .button.button-royal:hover, .toggleBar .toggle-container .button-royal.toggleButton:hover, .toggleBar .toggle-container .button-royal.untoggledButton:hover, .toggleBar .toggle-container .button-royal.toggledButton:hover {
       color: #fff;
       text-decoration: none; }
-    .button.button-royal.active, .button-royal.active.toggleButton, .button-royal.active.untoggledButton, .button-royal.active.toggledButton, .button.button-royal.activated, .button-royal.activated.toggleButton, .button-royal.activated.untoggledButton, .button-royal.activated.toggledButton {
+    .button.button-royal.active, .toggleBar .toggle-container .button-royal.active.toggleButton, .toggleBar .toggle-container .button-royal.active.untoggledButton, .toggleBar .toggle-container .button-royal.active.toggledButton, .button.button-royal.activated, .toggleBar .toggle-container .button-royal.activated.toggleButton, .toggleBar .toggle-container .button-royal.activated.untoggledButton, .toggleBar .toggle-container .button-royal.activated.toggledButton {
       background-color: #6b46e5; }
-    .button.button-royal.button-clear, .button-royal.button-clear.toggleButton, .button-royal.button-clear.untoggledButton, .button-royal.button-clear.toggledButton {
+    .button.button-royal.button-clear, .toggleBar .toggle-container .button-royal.button-clear.toggleButton, .toggleBar .toggle-container .button-royal.button-clear.untoggledButton, .toggleBar .toggle-container .button-royal.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #886aea; }
-    .button.button-royal.button-icon, .button-royal.button-icon.toggleButton, .button-royal.button-icon.untoggledButton, .button-royal.button-icon.toggledButton {
+    .button.button-royal.button-icon, .toggleBar .toggle-container .button-royal.button-icon.toggleButton, .toggleBar .toggle-container .button-royal.button-icon.untoggledButton, .toggleBar .toggle-container .button-royal.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-royal.button-outline, .button-royal.toggleButton, .button-royal.untoggledButton, .button-royal.toggledButton {
+    .button.button-royal.button-outline, .toggleBar .toggle-container .button-royal.toggleButton, .toggleBar .toggle-container .button-royal.untoggledButton, .toggleBar .toggle-container .button-royal.toggledButton {
       border-color: #886aea;
       background: transparent;
       color: #886aea; }
-      .button.button-royal.button-outline.active, .button-royal.active.toggleButton, .button-royal.active.untoggledButton, .button-royal.active.toggledButton, .button.button-royal.button-outline.activated, .button-royal.activated.toggleButton, .button-royal.activated.untoggledButton, .button-royal.activated.toggledButton {
+      .button.button-royal.button-outline.active, .toggleBar .toggle-container .button-royal.active.toggleButton, .toggleBar .toggle-container .button-royal.active.untoggledButton, .toggleBar .toggle-container .button-royal.active.toggledButton, .button.button-royal.button-outline.activated, .toggleBar .toggle-container .button-royal.activated.toggleButton, .toggleBar .toggle-container .button-royal.activated.untoggledButton, .toggleBar .toggle-container .button-royal.activated.toggledButton {
         background-color: #886aea;
         box-shadow: none;
         color: #fff; }
-  .button.button-dark, .button-dark.toggleButton, .button-dark.untoggledButton, .button-dark.toggledButton {
+  .button.button-dark, .toggleBar .toggle-container .button-dark.toggleButton, .toggleBar .toggle-container .button-dark.untoggledButton, .toggleBar .toggle-container .button-dark.toggledButton {
     border-color: transparent;
     background-color: #444;
     color: #fff; }
-    .button.button-dark:hover, .button-dark.toggleButton:hover, .button-dark.untoggledButton:hover, .button-dark.toggledButton:hover {
+    .button.button-dark:hover, .toggleBar .toggle-container .button-dark.toggleButton:hover, .toggleBar .toggle-container .button-dark.untoggledButton:hover, .toggleBar .toggle-container .button-dark.toggledButton:hover {
       color: #fff;
       text-decoration: none; }
-    .button.button-dark.active, .button-dark.active.toggleButton, .button-dark.active.untoggledButton, .button-dark.active.toggledButton, .button.button-dark.activated, .button-dark.activated.toggleButton, .button-dark.activated.untoggledButton, .button-dark.activated.toggledButton {
+    .button.button-dark.active, .toggleBar .toggle-container .button-dark.active.toggleButton, .toggleBar .toggle-container .button-dark.active.untoggledButton, .toggleBar .toggle-container .button-dark.active.toggledButton, .button.button-dark.activated, .toggleBar .toggle-container .button-dark.activated.toggleButton, .toggleBar .toggle-container .button-dark.activated.untoggledButton, .toggleBar .toggle-container .button-dark.activated.toggledButton {
       background-color: #262626; }
-    .button.button-dark.button-clear, .button-dark.button-clear.toggleButton, .button-dark.button-clear.untoggledButton, .button-dark.button-clear.toggledButton {
+    .button.button-dark.button-clear, .toggleBar .toggle-container .button-dark.button-clear.toggleButton, .toggleBar .toggle-container .button-dark.button-clear.untoggledButton, .toggleBar .toggle-container .button-dark.button-clear.toggledButton {
       border-color: transparent;
       background: none;
       box-shadow: none;
       color: #444; }
-    .button.button-dark.button-icon, .button-dark.button-icon.toggleButton, .button-dark.button-icon.untoggledButton, .button-dark.button-icon.toggledButton {
+    .button.button-dark.button-icon, .toggleBar .toggle-container .button-dark.button-icon.toggleButton, .toggleBar .toggle-container .button-dark.button-icon.untoggledButton, .toggleBar .toggle-container .button-dark.button-icon.toggledButton {
       border-color: transparent;
       background: none; }
-    .button.button-dark.button-outline, .button-dark.toggleButton, .button-dark.untoggledButton, .button-dark.toggledButton {
+    .button.button-dark.button-outline, .toggleBar .toggle-container .button-dark.toggleButton, .toggleBar .toggle-container .button-dark.untoggledButton, .toggleBar .toggle-container .button-dark.toggledButton {
       border-color: #444;
       background: transparent;
       color: #444; }
-      .button.button-dark.button-outline.active, .button-dark.active.toggleButton, .button-dark.active.untoggledButton, .button-dark.active.toggledButton, .button.button-dark.button-outline.activated, .button-dark.activated.toggleButton, .button-dark.activated.untoggledButton, .button-dark.activated.toggledButton {
+      .button.button-dark.button-outline.active, .toggleBar .toggle-container .button-dark.active.toggleButton, .toggleBar .toggle-container .button-dark.active.untoggledButton, .toggleBar .toggle-container .button-dark.active.toggledButton, .button.button-dark.button-outline.activated, .toggleBar .toggle-container .button-dark.activated.toggleButton, .toggleBar .toggle-container .button-dark.activated.untoggledButton, .toggleBar .toggle-container .button-dark.activated.toggledButton {
         background-color: #444;
         box-shadow: none;
         color: #fff; }
@@ -8905,7 +8975,7 @@ progress {
   min-width: initial;
   border-color: transparent;
   background: none; }
-  .button-icon.button.active, .button-icon.active.toggleButton, .button-icon.active.untoggledButton, .button-icon.active.toggledButton, .button-icon.button.activated, .button-icon.activated.toggleButton, .button-icon.activated.untoggledButton, .button-icon.activated.toggledButton {
+  .button-icon.button.active, .toggleBar .toggle-container .button-icon.active.toggleButton, .toggleBar .toggle-container .button-icon.active.untoggledButton, .toggleBar .toggle-container .button-icon.active.toggledButton, .button-icon.button.activated, .toggleBar .toggle-container .button-icon.activated.toggleButton, .toggleBar .toggle-container .button-icon.activated.untoggledButton, .toggleBar .toggle-container .button-icon.activated.toggledButton {
     border-color: transparent;
     background: none;
     box-shadow: none;
@@ -8932,21 +9002,21 @@ progress {
   .button-clear.active, .button-clear.activated {
     opacity: 0.3; }
 
-.button-outline, .toggleButton, .untoggledButton, .toggledButton {
+.button-outline, .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .toggledButton {
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
   background: none;
   box-shadow: none; }
-  .button-outline.button-outline, .toggleButton, .untoggledButton, .toggledButton {
+  .button-outline.button-outline, .toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .toggledButton {
     border-color: #b2b2b2;
     background: transparent;
     color: #b2b2b2; }
-    .button-outline.button-outline.active, .active.toggleButton, .active.untoggledButton, .active.toggledButton, .button-outline.button-outline.activated, .activated.toggleButton, .activated.untoggledButton, .activated.toggledButton {
+    .button-outline.button-outline.active, .toggleBar .toggle-container .active.toggleButton, .toggleBar .toggle-container .active.untoggledButton, .toggleBar .toggle-container .active.toggledButton, .button-outline.button-outline.activated, .toggleBar .toggle-container .activated.toggleButton, .toggleBar .toggle-container .activated.untoggledButton, .toggleBar .toggle-container .activated.toggledButton {
       background-color: #b2b2b2;
       box-shadow: none;
       color: #fff; }
 
-.padding > .button.button-block:first-child, .padding > .button-block.toggleButton:first-child, .padding > .button-block.untoggledButton:first-child, .padding > .button-block.toggledButton:first-child {
+.padding > .button.button-block:first-child, .toggleBar > .button.button-block:first-child, .toggleBar .toggle-container .padding > .button-block.toggleButton:first-child, .toggleBar .toggle-container .toggleBar > .button-block.toggleButton:first-child, .toggleBar .toggle-container .padding > .button-block.untoggledButton:first-child, .toggleBar .toggle-container .toggleBar > .button-block.untoggledButton:first-child, .toggleBar .toggle-container .padding > .button-block.toggledButton:first-child, .toggleBar .toggle-container .toggleBar > .button-block.toggledButton:first-child {
   margin-top: 0; }
 
 .button-block {
@@ -8956,9 +9026,9 @@ progress {
     clear: both; }
 
 .button-full,
-.button-full > .button,
-.button-full > .toggleButton,
-.button-full > .untoggledButton,
+.button-full > .button, .toggleBar .toggle-container
+.button-full > .toggleButton, .toggleBar .toggle-container
+.button-full > .untoggledButton, .toggleBar .toggle-container
 .button-full > .toggledButton {
   display: block;
   margin-right: 0;
@@ -8969,26 +9039,26 @@ progress {
 
 button.button-block,
 button.button-full,
-.button-full > button.button,
-.button-full > button.toggleButton,
-.button-full > button.untoggledButton,
+.button-full > button.button, .toggleBar .toggle-container
+.button-full > button.toggleButton, .toggleBar .toggle-container
+.button-full > button.untoggledButton, .toggleBar .toggle-container
 .button-full > button.toggledButton,
 input.button.button-block,
-input.button-block.toggleButton,
-input.button-block.untoggledButton,
-input.button-block.toggledButton {
+.toggleBar .toggle-container input.button-block.toggleButton,
+.toggleBar .toggle-container input.button-block.untoggledButton,
+.toggleBar .toggle-container input.button-block.toggledButton {
   width: 100%; }
 
-a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
+a.button, .toggleBar .toggle-container a.toggleButton, .toggleBar .toggle-container a.untoggledButton, .toggleBar .toggle-container a.toggledButton {
   text-decoration: none; }
-  a.button .icon:before, a.toggleButton .icon:before, a.untoggledButton .icon:before, a.toggledButton .icon:before, a.button.icon:before, a.icon.toggleButton:before, a.icon.untoggledButton:before, a.icon.toggledButton:before, a.button.icon-left:before, a.icon-left.toggleButton:before, a.icon-left.untoggledButton:before, a.icon-left.toggledButton:before, a.button.icon-right:before, a.icon-right.toggleButton:before, a.icon-right.untoggledButton:before, a.icon-right.toggledButton:before {
+  a.button .icon:before, .toggleBar .toggle-container a.toggleButton .icon:before, .toggleBar .toggle-container a.untoggledButton .icon:before, .toggleBar .toggle-container a.toggledButton .icon:before, a.button.icon:before, .toggleBar .toggle-container a.icon.toggleButton:before, .toggleBar .toggle-container a.icon.untoggledButton:before, .toggleBar .toggle-container a.icon.toggledButton:before, a.button.icon-left:before, .toggleBar .toggle-container a.icon-left.toggleButton:before, .toggleBar .toggle-container a.icon-left.untoggledButton:before, .toggleBar .toggle-container a.icon-left.toggledButton:before, a.button.icon-right:before, .toggleBar .toggle-container a.icon-right.toggleButton:before, .toggleBar .toggle-container a.icon-right.untoggledButton:before, .toggleBar .toggle-container a.icon-right.toggledButton:before {
     margin-top: 2px; }
 
-.button.disabled, .disabled.toggleButton, .disabled.untoggledButton, .disabled.toggledButton,
+.button.disabled, .toggleBar .toggle-container .disabled.toggleButton, .toggleBar .toggle-container .disabled.untoggledButton, .toggleBar .toggle-container .disabled.toggledButton,
 .button[disabled],
-[disabled].toggleButton,
-[disabled].untoggledButton,
-[disabled].toggledButton {
+.toggleBar .toggle-container [disabled].toggleButton,
+.toggleBar .toggle-container [disabled].untoggledButton,
+.toggleBar .toggle-container [disabled].toggledButton {
   opacity: .4;
   cursor: default !important;
   pointer-events: none; }
@@ -8997,7 +9067,7 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
  * Button Bar
  * --------------------------------------------------
  */
-.button-bar {
+.button-bar, .toggleBar .toggle-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -9011,22 +9081,22 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
   -ms-flex: 1;
   flex: 1;
   width: 100%; }
-  .button-bar.button-bar-inline {
+  .button-bar.button-bar-inline, .toggleBar .button-bar-inline.toggle-container {
     display: block;
     width: auto;
     *zoom: 1; }
-    .button-bar.button-bar-inline:before, .button-bar.button-bar-inline:after {
+    .button-bar.button-bar-inline:before, .toggleBar .button-bar-inline.toggle-container:before, .button-bar.button-bar-inline:after, .toggleBar .button-bar-inline.toggle-container:after {
       display: table;
       content: "";
       line-height: 0; }
-    .button-bar.button-bar-inline:after {
+    .button-bar.button-bar-inline:after, .toggleBar .button-bar-inline.toggle-container:after {
       clear: both; }
-    .button-bar.button-bar-inline > .button, .button-bar.button-bar-inline > .toggleButton, .button-bar.button-bar-inline > .untoggledButton, .button-bar.button-bar-inline > .toggledButton {
+    .button-bar.button-bar-inline > .button, .toggleBar .button-bar-inline.toggle-container > .button, .toggleBar .toggle-container .button-bar.button-bar-inline > .toggleButton, .toggleBar .button-bar-inline.toggle-container > .toggleButton, .toggleBar .toggle-container .button-bar.button-bar-inline > .untoggledButton, .toggleBar .button-bar-inline.toggle-container > .untoggledButton, .toggleBar .toggle-container .button-bar.button-bar-inline > .toggledButton, .toggleBar .button-bar-inline.toggle-container > .toggledButton {
       width: auto;
       display: inline-block;
       float: left; }
 
-.button-bar > .button, .button-bar > .toggleButton, .button-bar > .untoggledButton, .button-bar > .toggledButton {
+.button-bar > .button, .toggleBar .toggle-container > .button, .toggleBar .toggle-container .button-bar > .toggleButton, .toggleBar .toggle-container > .toggleButton, .toggleBar .toggle-container .button-bar > .untoggledButton, .toggleBar .toggle-container > .untoggledButton, .toggleBar .toggle-container .button-bar > .toggledButton, .toggleBar .toggle-container > .toggledButton {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -moz-box-flex: 1;
@@ -9042,22 +9112,22 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap; }
-  .button-bar > .button:before, .button-bar > .toggleButton:before, .button-bar > .untoggledButton:before, .button-bar > .toggledButton:before,
-  .button-bar > .button .icon:before,
-  .button-bar > .toggleButton .icon:before,
-  .button-bar > .untoggledButton .icon:before,
-  .button-bar > .toggledButton .icon:before {
+  .button-bar > .button:before, .toggleBar .toggle-container > .button:before, .toggleBar .toggle-container .button-bar > .toggleButton:before, .toggleBar .toggle-container > .toggleButton:before, .toggleBar .toggle-container .button-bar > .untoggledButton:before, .toggleBar .toggle-container > .untoggledButton:before, .toggleBar .toggle-container .button-bar > .toggledButton:before, .toggleBar .toggle-container > .toggledButton:before,
+  .button-bar > .button .icon:before, .toggleBar .toggle-container > .button .icon:before, .toggleBar .toggle-container
+  .button-bar > .toggleButton .icon:before, .toggleBar .toggle-container > .toggleButton .icon:before, .toggleBar .toggle-container
+  .button-bar > .untoggledButton .icon:before, .toggleBar .toggle-container > .untoggledButton .icon:before, .toggleBar .toggle-container
+  .button-bar > .toggledButton .icon:before, .toggleBar .toggle-container > .toggledButton .icon:before {
     line-height: 44px; }
-  .button-bar > .button:first-child, .button-bar > .toggleButton:first-child, .button-bar > .untoggledButton:first-child, .button-bar > .toggledButton:first-child {
+  .button-bar > .button:first-child, .toggleBar .toggle-container > .button:first-child, .toggleBar .toggle-container .button-bar > .toggleButton:first-child, .toggleBar .toggle-container > .toggleButton:first-child, .toggleBar .toggle-container .button-bar > .untoggledButton:first-child, .toggleBar .toggle-container > .untoggledButton:first-child, .toggleBar .toggle-container .button-bar > .toggledButton:first-child, .toggleBar .toggle-container > .toggledButton:first-child {
     border-radius: 4px 0px 0px 4px; }
-  .button-bar > .button:last-child, .button-bar > .toggleButton:last-child, .button-bar > .untoggledButton:last-child, .button-bar > .toggledButton:last-child {
+  .button-bar > .button:last-child, .toggleBar .toggle-container > .button:last-child, .toggleBar .toggle-container .button-bar > .toggleButton:last-child, .toggleBar .toggle-container > .toggleButton:last-child, .toggleBar .toggle-container .button-bar > .untoggledButton:last-child, .toggleBar .toggle-container > .untoggledButton:last-child, .toggleBar .toggle-container .button-bar > .toggledButton:last-child, .toggleBar .toggle-container > .toggledButton:last-child {
     border-right-width: 1px;
     border-radius: 0px 4px 4px 0px; }
-  .button-bar > .button:only-child, .button-bar > .toggleButton:only-child, .button-bar > .untoggledButton:only-child, .button-bar > .toggledButton:only-child {
+  .button-bar > .button:only-child, .toggleBar .toggle-container > .button:only-child, .toggleBar .toggle-container .button-bar > .toggleButton:only-child, .toggleBar .toggle-container > .toggleButton:only-child, .toggleBar .toggle-container .button-bar > .untoggledButton:only-child, .toggleBar .toggle-container > .untoggledButton:only-child, .toggleBar .toggle-container .button-bar > .toggledButton:only-child, .toggleBar .toggle-container > .toggledButton:only-child {
     border-radius: 4px; }
 
-.button-bar > .button-small:before,
-.button-bar > .button-small .icon:before {
+.button-bar > .button-small:before, .toggleBar .toggle-container > .button-small:before,
+.button-bar > .button-small .icon:before, .toggleBar .toggle-container > .button-small .icon:before {
   line-height: 28px; }
 
 /**
@@ -9457,7 +9527,7 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
  * Content Padding
  * --------------------------------------------------
  */
-.padding {
+.padding, .toggleBar {
   padding: 10px; }
 
 .padding-top,
@@ -9731,7 +9801,7 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
 [nav-view-transition="ios"][nav-view-direction="forward"] [nav-view="leaving"] {
   z-index: 2; }
 
-[nav-bar-transition="ios"] .title,
+[nav-bar-transition="ios"] .title, [nav-bar-transition="ios"] .toggleBar .toggleLabel, .toggleBar [nav-bar-transition="ios"] .toggleLabel,
 [nav-bar-transition="ios"] .buttons,
 [nav-bar-transition="ios"] .back-text {
   -webkit-transition-duration: 500ms;
@@ -9771,7 +9841,7 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
 [nav-view-transition="android"][nav-view-direction="forward"] [nav-view="leaving"] {
   z-index: 2; }
 
-[nav-bar-transition="android"] .title,
+[nav-bar-transition="android"] .title, [nav-bar-transition="android"] .toggleBar .toggleLabel, .toggleBar [nav-bar-transition="android"] .toggleLabel,
 [nav-bar-transition="android"] .buttons {
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
@@ -9794,6 +9864,8 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
 
 [nav-swipe="fast"] [nav-view],
 [nav-swipe="fast"] .title,
+[nav-swipe="fast"] .toggleBar .toggleLabel, .toggleBar
+[nav-swipe="fast"] .toggleLabel,
 [nav-swipe="fast"] .buttons,
 [nav-swipe="fast"] .back-text {
   -webkit-transition-duration: 50ms;
@@ -9803,6 +9875,8 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
 
 [nav-swipe="slow"] [nav-view],
 [nav-swipe="slow"] .title,
+[nav-swipe="slow"] .toggleBar .toggleLabel, .toggleBar
+[nav-swipe="slow"] .toggleLabel,
 [nav-swipe="slow"] .buttons,
 [nav-swipe="slow"] .back-text {
   -webkit-transition-duration: 160ms;
@@ -9819,7 +9893,7 @@ a.button, a.toggleButton, a.untoggledButton, a.toggledButton {
   -webkit-transition-duration: 0;
   transition-duration: 0; }
 
-[nav-bar="stage"] .title,
+[nav-bar="stage"] .title, [nav-bar="stage"] .toggleBar .toggleLabel, .toggleBar [nav-bar="stage"] .toggleLabel,
 [nav-bar="stage"] .buttons,
 [nav-bar="stage"] .back-text {
   position: absolute;
@@ -10109,20 +10183,20 @@ hr {
   padding-left: 15px;
   padding-right: 15px; }
 
-.row-bs, .frame-container {
+.row-bs, .toggleBar, .frame-container {
   margin-left: -15px;
   margin-right: -15px; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .frame-abstract, .frame, .frame-selected, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .frame-abstract, .frame, .frame-selected, .col-sm-6, .col-md-6, .button-bottom, .button-center, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .button-bottom, .button-center, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .toggleBar .toggleLabel, .frame-abstract, .frame, .frame-selected, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .frame-abstract, .frame, .frame-selected, .col-sm-6, .col-md-6, .button-bottom, .button-center, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .toggleBar .toggle-container, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .toggleBar .toggleLabel, .toggleBar .toggle-container, .button-bottom, .button-center, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .frame-abstract, .frame, .frame-selected, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .button-bottom, .button-center {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .frame-abstract, .frame, .frame-selected, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .toggleBar .toggleLabel, .toggleBar .toggle-container, .button-bottom, .button-center {
   float: left; }
 
-.col-xs-12, .button-bottom, .button-center {
+.col-xs-12, .toggleBar .toggleLabel, .toggleBar .toggle-container, .button-bottom, .button-center {
   width: 100%; }
 
 .col-xs-11 {
@@ -10382,7 +10456,7 @@ hr {
     margin-left: 0; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .frame-abstract, .frame, .frame-selected, .col-md-5, .col-md-6, .button-bottom, .button-center, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .toggleBar .toggleLabel, .frame-abstract, .frame, .frame-selected, .col-md-5, .col-md-6, .button-bottom, .button-center, .col-md-7, .col-md-8, .toggleBar .toggle-container, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-12 {
     width: 100%; }
@@ -10392,7 +10466,7 @@ hr {
     width: 83.33333333%; }
   .col-md-9 {
     width: 75%; }
-  .col-md-8 {
+  .col-md-8, .toggleBar .toggle-container {
     width: 66.66666667%; }
   .col-md-7 {
     width: 58.33333333%; }
@@ -10400,7 +10474,7 @@ hr {
     width: 50%; }
   .col-md-5 {
     width: 41.66666667%; }
-  .col-md-4, .frame-abstract, .frame, .frame-selected {
+  .col-md-4, .toggleBar .toggleLabel, .frame-abstract, .frame, .frame-selected {
     width: 33.33333333%; }
   .col-md-3 {
     width: 25%; }
@@ -10593,11 +10667,11 @@ hr {
   .col-lg-offset-0 {
     margin-left: 0; } }
 
-.clearfix:before, .clearfix:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row-bs:before, .frame-container:before, .row-bs:after, .frame-container:after {
+.clearfix:before, .clearfix:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row-bs:before, .toggleBar:before, .frame-container:before, .row-bs:after, .toggleBar:after, .frame-container:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .container:after, .container-fluid:after, .row-bs:after, .frame-container:after {
+.clearfix:after, .container:after, .container-fluid:after, .row-bs:after, .toggleBar:after, .frame-container:after {
   clear: both; }
 
 .center-block {
@@ -10645,17 +10719,17 @@ a {
 
 .text-bold {
   font-weight: bold !important; }
-  .text-bold .title {
+  .text-bold .title, .text-bold .toggleBar .toggleLabel, .toggleBar .text-bold .toggleLabel {
     font-weight: bold !important; }
 
-.toggleButton, .untoggledButton, .toggledButton {
+.toggleBar .toggle-container .toggleButton, .toggleBar .toggle-container .untoggledButton, .toggleBar .toggle-container .toggledButton {
   border-color: #444 !important; }
 
-.untoggledButton {
+.toggleBar .toggle-container .untoggledButton {
   background-color: #fff !important;
   color: #444 !important; }
 
-.toggledButton {
+.toggleBar .toggle-container .toggledButton {
   background-color: #444 !important;
   color: #fff !important; }
 
@@ -10668,3 +10742,10 @@ a {
 
 .avoid-header {
   padding-top: 50px; }
+
+.margin-h {
+  margin-right: 16px !important;
+  margin-left: 0 !important; }
+
+.padding-zero {
+  padding-right: 0 !important; }
