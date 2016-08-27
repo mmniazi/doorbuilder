@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.doorbuilder872578" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Doors Builder</name>
-  <description>
-        Door Builder for Future Composites
+  <description>&#xD;
+        Door Builder for Future Composites&#xD;
     </description>
-  <author email="muhammad.mohsin1994@gmail.com" href="http://mohsinniazi.me/">
-      Muhammad Mohsin Khan Niazi
+  <author email="muhammad.mohsin1994@gmail.com" href="http://mohsinniazi.me/">&#xD;
+      Muhammad Mohsin Khan Niazi&#xD;
     </author>
   <content src="index.html"/>
   <access origin="*"/>

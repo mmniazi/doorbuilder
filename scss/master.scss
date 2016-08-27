@@ -5,22 +5,23 @@
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  -moz-appearance   : none;
-  appearance        : none;
-  margin            : 0;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 a {
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 .text-bold {
-  font-weight: bold!important;
+  font-weight: bold !important;
 
   .title {
-    font-weight: bold!important;
+    font-weight: bold !important;
   }
 }
+
 // Toggle Button
 
 .toggleBar {
@@ -40,24 +41,25 @@ a {
     @extend .col-md-8;
 
     .toggleButton {
-      border-color: $dark!important;
+      border-color: $dark !important;
       @extend .button;
       @extend .button-outline;
     }
 
     .untoggledButton {
       @extend .toggleButton;
-      background-color: $light!important;
-      color           : $dark!important;
+      background-color: $light !important;
+      color: $dark !important;
     }
 
     .toggledButton {
       @extend .toggleButton;
-      background-color: $dark!important;
-      color           : $light!important;
+      background-color: $dark !important;
+      color: $light !important;
     }
   }
 }
+
 // Image Frames
 
 .frame-container {
@@ -67,7 +69,7 @@ a {
 .frame-abstract {
   @extend .col-xs-6;
   @extend .col-md-4;
-  padding   : 0 5px;
+  padding: 0 5px;
   text-align: left;
 }
 
@@ -79,6 +81,7 @@ a {
 .frame-selected {
   @extend .frame-abstract;
 }
+
 // Bottom buttons
 
 .button-bottom {
@@ -91,6 +94,7 @@ a {
   @extend .col-xs-offset-0;
   @extend .col-md-offset-3;
 }
+
 // Fix header
 
 .avoid-header {
@@ -99,9 +103,34 @@ a {
 
 .margin-h {
   margin-right: 16px !important;
-  margin-left : 0 !important;
+  margin-left: 0 !important;
 }
 
 .padding-zero {
   padding-right: 0 !important;
+}
+
+.preview-container {
+
+  .preview-texture {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80%;
+    z-index: 1;
+  }
+
+  .preview-design {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80%;
+    z-index: 2;
+  }
 }

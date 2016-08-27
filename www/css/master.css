@@ -10749,3 +10749,23 @@ a {
 
 .padding-zero {
   padding-right: 0 !important; }
+
+.preview-container .preview-texture {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80%;
+  z-index: 1; }
+
+.preview-container .preview-design {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80%;
+  z-index: 2; }
